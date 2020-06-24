@@ -217,4 +217,17 @@
         <tag>hexo</tag>
       </tags>
   </entry>
+  <entry>
+    <title>my diary</title>
+    <url>/2020/06/24/my-diary/</url>
+    <content><![CDATA[<h2 id="my-diary-6-24"><a href="#my-diary-6-24" class="headerlink" title="my diary 6.24"></a>my diary 6.24</h2><p>this is the diary of 6.24</p>
+]]></content>
+      <categories>
+        <category>diary</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>matery</tag>
+      </tags>
+  </entry>
 </search>
