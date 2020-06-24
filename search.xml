@@ -1,93 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Beginners Guide to DNS</title>
-    <url>/2020/06/18/Understanding-DNS-Beginners-Guide-to-DNS/</url>
-    <content><![CDATA[<p>dns (domain name system) is one of the most important technologies/services on the internet, as without it the internet would be very difficult to use.</p>
-<p>dns provides a name to number (ip address) mapping or translation, allowing internet users to use, easy to remember names, and not numbers to access resources on a network and the internet.</p>
+    <title>Hello World</title>
+    <url>/2020/06/18/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <a id="more"></a>
 
-<p><strong>DNS Basics  – Understanding Why we Need it</strong><br>All devices (computers etc) that are connected to the Internet, your own network, or company network are identified by an IP address; which is a number.</p>
-<p>To make it easy for people to remember names (host names) are used to identify individual computers on a network.</p>
-<p>On early computer networks a simple text file called a hosts file was created that mapped host names to IP addresses.</p>
-<p>This enabled people to refer to other computers by the name, and their computer translated that name to an IP address when it needed to communicate with it.</p>
-<p>Here is the host file taken from my PC. It comes with all Windows machines</p>
-<p><img src="http://www.steves-internet-guide.com/wp-content/uploads/2012/01/hosts-file1.jpg" alt=""></p>
-<p>The location for the hosts file is normally C\windows\system32\drivers\etc</p>
-<p>As network sizes increased the hosts file approach became impractical due to the fact that:</p>
-<ul>
-<li>It needed to be stored on each computer</li>
-</ul>
-<ul>
-<li>The text file could take a along time to process due to the fact that it was unstructured.</li>
-</ul>
-<ul>
-<li>Updates were difficult to manage as all of the computers would need to be given an updated file.<br>To overcome these (and other) limitations the DNS system was developed.</li>
-</ul>
-<p>The DNS system essentially provides for:</p>
-<ul>
-<li>A way to organize the names- Domain name structure</li>
-</ul>
-<ul>
-<li>Protocols ,services and methods for storing,updating, and retrieving IP addresses for hosts computers.- DNS System<br>From the perspective of an end user you can consider the DNS system as a structured hosts file.<h2 id="Domain-Name-Structure"><a href="#Domain-Name-Structure" class="headerlink" title="Domain Name Structure"></a>Domain Name Structure</h2></li>
-</ul>
-<p>The hosts file is simply a list of names and IP addresses with no structure making it difficult to scale to a large number of machines.</p>
-<p>The solution is to place the machines into administrative areas known as domains, and arrange the domains in a hierarchy.</p>
-<p>This takes the form of a tree like structure that resembles the file system structure found on computers. See Understanding The Domain Name Structure</p>
-<p>DNS System<br>The DNS system consists of many Domain Name servers that together provide the name to IP address mapping for registered devices (usually servers) on the Internet.</p>
-<p>The main DNS severs (root servers) are owned and managed by a variety of different organizations, and are located mainly in the USA.</p>
-<p>Here is a list <a href="http://www.iana.org/domains/root/servers" target="_blank" rel="noopener">http://www.iana.org/domains/root/servers</a>.</p>
-<p>Other companies including ISPs have their own DNS servers which are linked to the root servers in a hierarchical fashion providing a distributed system.</p>
-<p>The following video explain both the host file and its problems, and the basics of how DNS works.</p>
-<p><a href="https://youtu.be/Vgc-Yqf_Tt4" target="_blank" rel="noopener">https://youtu.be/Vgc-Yqf_Tt4</a></p>
-<p>Fortunately you don’t need to manage a DNS server or create DNS records to use the Internet.</p>
-<p>However you need to have access to a DNS server.</p>
-<p>To access a DNS server you will need the IP address of the DNS server.</p>
-<p>This is usually supplied to you by your ISP (Internet Service Provider).</p>
-<p>Most client computers/devices will be configured to obtain an IP and a DNS server address automatically. (see below)</p>
-<p><img src="http://www.steves-internet-guide.com/wp-content/uploads/2012/04/windows-settings-ip-dns-automatically.jpg" alt=""></p>
-<p>You can Check what IP address and what DNS address you have been assigned by typing ipconfig/all at the command line.</p>
-<p><img src="http://www.steves-internet-guide.com/wp-content/uploads/2012/04/ipconfig-alljpg.jpg" alt=""></p>
-<p>If DNS isn’t working properly then you will be unable to connect to other computers on the Internet using their name, but you can still connect using their IP address if you know it.</p>
-<p>DNS Services- Open DNS and Google DNS<br>Most Home users will use the DNS severs provided by their ISP via their home router.</p>
-<p>However you can use alternative DNS servers like OpenDNS and Google Public DNS.</p>
-<p>This does mean that you will need to manually add these server addresses to your DNS settings.</p>
-<p>Why Use Alternative DNS Services?<br>The standard DNS server doesn’t provide any form of protection from malicious sites.</p>
-<p>Because DNS is the gateway to the Internet there are many companies that provide security related services based on the public DNS service.</p>
-<p>They do this by filtering DNS requests. Most will detect phishing and spam sites, and many will provide protection from adult related sites.</p>
-<p>Most security internet product suites will use some form of filtered DNS.</p>
-<p>Open DNS was one of the first companies to do this and they offer family protection for free.</p>
-<p>DNS server addresses are: 208.67.222.222 and 208.67.220.220</p>
-<p>Google also provide a public DNS service. This doesn’t provide filtering, but may provide a faster DNS service than your ISP.</p>
-<p>If your ISP blocks access to an address for some reason using an alternative DNS server like Google Public DNS may avoid the ISP blocks.</p>
-<p>IP addresses are : 8.8.8.8 and 8.8.4.4</p>
-<p>Basic DNS Concepts<br>There are many terms that you will see when reading about DNS.</p>
-<p>Terms like zones, zone files, caching server etc.</p>
-<p>This video is a good introduction to understanding those basic terms.</p>
-<p><a href="https://youtu.be/T6ZD8st8S2w" target="_blank" rel="noopener">https://youtu.be/T6ZD8st8S2w</a></p>
-<p>See DNS Zones and Zone Files Explained</p>
-<p>DNS Name Resolution<br>To resolve a host name to an IP address using DNS you will need to have s DNS client on your machine, and the client must know the IP address of a DNS server.</p>
-<p>The DNS client queries it’s DNS server which then follows through a process to get an answer- See DNS lookups explained.</p>
-<p>Host Name Resolution<br>DNS and Host are two name resolution methods but they are not the only ones.</p>
-<p>A Windows client will use DNS,Hosts and other methods to resolve a host name or computer name to an IP address. See Understanding Host name resolution methods.</p>
-<p>Dynamic DNS<br>Internal IP addresses are normally are non static as they are usually assigned by a DHCP server.</p>
-<p>In large corporate networks that use their own internal DNS and DHCP servers a need to keep the DNS servers up to date was required.</p>
-<p>DDNS (Dynamic DNS updates) was introduced  to solve this problem- Wiki</p>
-<p>The basic procedure is:</p>
-<p>The Machine gets IP address from DHCP<br>The Machine or the DHCP server contacts the DNS server and updates the DNS record with the IP address and DNS name.<br>Home and small business networks don’t use their own DNS servers because they don’t have so many servers/machines,and they don’t really need DDNS either because  all their machines are in the same broadcast domain.</p>
-<p>Because they are in the same broadcast domain windows networking will resolve the names and IP addresses, even if the IP addresses change.</p>
-<p>However small business/home network may need DDNS if they want to provide access to internal resources from across the internet. See Dynamic DNS and Services Guide</p>
-<p>DNS Problems<br>If you have problems connecting to resources on the Internet then DNS is one of the first things to check.</p>
-<p>The main troubleshooting tool is nslookup and it is available on all of the main operating systems. See using nslookup .</p>
-<p>Summary<br>The DNS system provides a domain name to IP address mapping for devices connected to the Internet, and it is crucial to the working of the Internet.</p>
-<p>Usually you don’t need to worry about it as your are automatically assigned the address of the DNS server by your ISP and Home router.</p>
-<p>If you are concerned about security then consider using a filtered DNS service like Open DNS.</p>
-<p>Related Tutorials and Resources:</p>
-<p>DNS Zone Fikes Explained<br>Understanding IP addresses<br>DNS wiki<br>DNS Essentials video</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 ]]></content>
-      <tags>
-        <tag>dns</tag>
-      </tags>
   </entry>
   <entry>
     <title>markdown basic syntax</title>
@@ -198,23 +129,92 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/06/18/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+    <title>Beginners Guide to DNS</title>
+    <url>/2020/06/18/Understanding-DNS-Beginners-Guide-to-DNS/</url>
+    <content><![CDATA[<p>dns (domain name system) is one of the most important technologies/services on the internet, as without it the internet would be very difficult to use.</p>
+<p>dns provides a name to number (ip address) mapping or translation, allowing internet users to use, easy to remember names, and not numbers to access resources on a network and the internet.</p>
 <a id="more"></a>
 
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p><strong>DNS Basics  – Understanding Why we Need it</strong><br>All devices (computers etc) that are connected to the Internet, your own network, or company network are identified by an IP address; which is a number.</p>
+<p>To make it easy for people to remember names (host names) are used to identify individual computers on a network.</p>
+<p>On early computer networks a simple text file called a hosts file was created that mapped host names to IP addresses.</p>
+<p>This enabled people to refer to other computers by the name, and their computer translated that name to an IP address when it needed to communicate with it.</p>
+<p>Here is the host file taken from my PC. It comes with all Windows machines</p>
+<p><img src="http://www.steves-internet-guide.com/wp-content/uploads/2012/01/hosts-file1.jpg" alt=""></p>
+<p>The location for the hosts file is normally C\windows\system32\drivers\etc</p>
+<p>As network sizes increased the hosts file approach became impractical due to the fact that:</p>
+<ul>
+<li>It needed to be stored on each computer</li>
+</ul>
+<ul>
+<li>The text file could take a along time to process due to the fact that it was unstructured.</li>
+</ul>
+<ul>
+<li>Updates were difficult to manage as all of the computers would need to be given an updated file.<br>To overcome these (and other) limitations the DNS system was developed.</li>
+</ul>
+<p>The DNS system essentially provides for:</p>
+<ul>
+<li>A way to organize the names- Domain name structure</li>
+</ul>
+<ul>
+<li>Protocols ,services and methods for storing,updating, and retrieving IP addresses for hosts computers.- DNS System<br>From the perspective of an end user you can consider the DNS system as a structured hosts file.<h2 id="Domain-Name-Structure"><a href="#Domain-Name-Structure" class="headerlink" title="Domain Name Structure"></a>Domain Name Structure</h2></li>
+</ul>
+<p>The hosts file is simply a list of names and IP addresses with no structure making it difficult to scale to a large number of machines.</p>
+<p>The solution is to place the machines into administrative areas known as domains, and arrange the domains in a hierarchy.</p>
+<p>This takes the form of a tree like structure that resembles the file system structure found on computers. See Understanding The Domain Name Structure</p>
+<p>DNS System<br>The DNS system consists of many Domain Name servers that together provide the name to IP address mapping for registered devices (usually servers) on the Internet.</p>
+<p>The main DNS severs (root servers) are owned and managed by a variety of different organizations, and are located mainly in the USA.</p>
+<p>Here is a list <a href="http://www.iana.org/domains/root/servers" target="_blank" rel="noopener">http://www.iana.org/domains/root/servers</a>.</p>
+<p>Other companies including ISPs have their own DNS servers which are linked to the root servers in a hierarchical fashion providing a distributed system.</p>
+<p>The following video explain both the host file and its problems, and the basics of how DNS works.</p>
+<p><a href="https://youtu.be/Vgc-Yqf_Tt4" target="_blank" rel="noopener">https://youtu.be/Vgc-Yqf_Tt4</a></p>
+<p>Fortunately you don’t need to manage a DNS server or create DNS records to use the Internet.</p>
+<p>However you need to have access to a DNS server.</p>
+<p>To access a DNS server you will need the IP address of the DNS server.</p>
+<p>This is usually supplied to you by your ISP (Internet Service Provider).</p>
+<p>Most client computers/devices will be configured to obtain an IP and a DNS server address automatically. (see below)</p>
+<p><img src="http://www.steves-internet-guide.com/wp-content/uploads/2012/04/windows-settings-ip-dns-automatically.jpg" alt=""></p>
+<p>You can Check what IP address and what DNS address you have been assigned by typing ipconfig/all at the command line.</p>
+<p><img src="http://www.steves-internet-guide.com/wp-content/uploads/2012/04/ipconfig-alljpg.jpg" alt=""></p>
+<p>If DNS isn’t working properly then you will be unable to connect to other computers on the Internet using their name, but you can still connect using their IP address if you know it.</p>
+<p>DNS Services- Open DNS and Google DNS<br>Most Home users will use the DNS severs provided by their ISP via their home router.</p>
+<p>However you can use alternative DNS servers like OpenDNS and Google Public DNS.</p>
+<p>This does mean that you will need to manually add these server addresses to your DNS settings.</p>
+<p>Why Use Alternative DNS Services?<br>The standard DNS server doesn’t provide any form of protection from malicious sites.</p>
+<p>Because DNS is the gateway to the Internet there are many companies that provide security related services based on the public DNS service.</p>
+<p>They do this by filtering DNS requests. Most will detect phishing and spam sites, and many will provide protection from adult related sites.</p>
+<p>Most security internet product suites will use some form of filtered DNS.</p>
+<p>Open DNS was one of the first companies to do this and they offer family protection for free.</p>
+<p>DNS server addresses are: 208.67.222.222 and 208.67.220.220</p>
+<p>Google also provide a public DNS service. This doesn’t provide filtering, but may provide a faster DNS service than your ISP.</p>
+<p>If your ISP blocks access to an address for some reason using an alternative DNS server like Google Public DNS may avoid the ISP blocks.</p>
+<p>IP addresses are : 8.8.8.8 and 8.8.4.4</p>
+<p>Basic DNS Concepts<br>There are many terms that you will see when reading about DNS.</p>
+<p>Terms like zones, zone files, caching server etc.</p>
+<p>This video is a good introduction to understanding those basic terms.</p>
+<p><a href="https://youtu.be/T6ZD8st8S2w" target="_blank" rel="noopener">https://youtu.be/T6ZD8st8S2w</a></p>
+<p>See DNS Zones and Zone Files Explained</p>
+<p>DNS Name Resolution<br>To resolve a host name to an IP address using DNS you will need to have s DNS client on your machine, and the client must know the IP address of a DNS server.</p>
+<p>The DNS client queries it’s DNS server which then follows through a process to get an answer- See DNS lookups explained.</p>
+<p>Host Name Resolution<br>DNS and Host are two name resolution methods but they are not the only ones.</p>
+<p>A Windows client will use DNS,Hosts and other methods to resolve a host name or computer name to an IP address. See Understanding Host name resolution methods.</p>
+<p>Dynamic DNS<br>Internal IP addresses are normally are non static as they are usually assigned by a DHCP server.</p>
+<p>In large corporate networks that use their own internal DNS and DHCP servers a need to keep the DNS servers up to date was required.</p>
+<p>DDNS (Dynamic DNS updates) was introduced  to solve this problem- Wiki</p>
+<p>The basic procedure is:</p>
+<p>The Machine gets IP address from DHCP<br>The Machine or the DHCP server contacts the DNS server and updates the DNS record with the IP address and DNS name.<br>Home and small business networks don’t use their own DNS servers because they don’t have so many servers/machines,and they don’t really need DDNS either because  all their machines are in the same broadcast domain.</p>
+<p>Because they are in the same broadcast domain windows networking will resolve the names and IP addresses, even if the IP addresses change.</p>
+<p>However small business/home network may need DDNS if they want to provide access to internal resources from across the internet. See Dynamic DNS and Services Guide</p>
+<p>DNS Problems<br>If you have problems connecting to resources on the Internet then DNS is one of the first things to check.</p>
+<p>The main troubleshooting tool is nslookup and it is available on all of the main operating systems. See using nslookup .</p>
+<p>Summary<br>The DNS system provides a domain name to IP address mapping for devices connected to the Internet, and it is crucial to the working of the Internet.</p>
+<p>Usually you don’t need to worry about it as your are automatically assigned the address of the DNS server by your ISP and Home router.</p>
+<p>If you are concerned about security then consider using a filtered DNS service like Open DNS.</p>
+<p>Related Tutorials and Resources:</p>
+<p>DNS Zone Fikes Explained<br>Understanding IP addresses<br>DNS wiki<br>DNS Essentials video</p>
 ]]></content>
+      <tags>
+        <tag>dns</tag>
+      </tags>
   </entry>
 </search>
