@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="s, Fireflyuan">
+    <meta name="keywords" content="AWS上RHEL-ec2 vsftpd搭建常见问题总结, Fireflyuan">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -27,7 +27,7 @@
 </script>
 
 
-    <title>s | Fireflyuan</title>
+    <title>AWS上RHEL-ec2 vsftpd搭建常见问题总结 | Fireflyuan</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -347,12 +347,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">s</h1>
+                    <h1 class="description center-align post-title">AWS上RHEL-ec2 vsftpd搭建常见问题总结</h1>
                 </div>
             </div>
         </div>
@@ -474,6 +474,19 @@
                 </div>
                 <div class="col s5 right-align">
                     
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/development/" class="post-category">
+                                development
+                            </a>
+                        
+                            <a href="/categories/development/linux/" class="post-category">
+                                linux
+                            </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
 
@@ -481,21 +494,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-06-24
+                    2020-07-01
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2020-06-24
+                    2020-07-01
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    0
+                    222
                 </div>
                 
 
@@ -517,7 +530,21 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <a id="more"></a>
+<h3 id="浏览器端测试"><a href="#浏览器端测试" class="headerlink" title="浏览器端测试"></a>浏览器端测试</h3><p>打开浏览器，地址栏输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">回车，弹出输入用户名密码的窗口，确认，如果成功则会显示&#x2F;var&#x2F;www&#x2F;下的文件。</span><br><span class="line">两种常见的问题:</span><br><span class="line">#### 问题1</span><br><span class="line">浏览器的页面只显示：index of ,而不显示任何ftp目录中文件或文件夹，执行：</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;sudo getsebool -a | grep ftp</span><br></pre></td></tr></table></figure>
+
+<p>如果你的结果是这样的：</p>
+<figure class="highlight plain"><figcaption><span>--> off</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ftpd_connect_all_unreserved --&gt; on</span><br><span class="line">ftpd_connect_db --&gt; off</span><br><span class="line">ftpd_full_access --&gt; off</span><br><span class="line">ftpd_use_cifs --&gt; off</span><br><span class="line">ftpd_use_fusefs --&gt; off</span><br><span class="line">ftpd_use_nfs --&gt; off</span><br><span class="line">ftpd_use_passive_mode --&gt; off</span><br><span class="line">httpd_can_connect_ftp --&gt; off</span><br><span class="line">httpd_enable_ftp_server --&gt; off</span><br><span class="line">tftp_anon_write --&gt; off</span><br><span class="line">tftp_home_dir --&gt; off</span><br></pre></td></tr></table></figure>
+<p>执行；</p>
+<figure class="highlight plain"><figcaption><span>setsebool -P ftpd_full_access 1``` 将```ftpd_full_access```由off改成on.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">再次执行</span><br><span class="line">&#96;&#96;&#96;sudo getsebool -a | grep ftp</span><br></pre></td></tr></table></figure>
+
+<p>显示<code>ftpd_full_access --&gt; off</code></p>
+<p>重启vsftpd服务，问题应该解决了。</p>
+<h4 id="问题2"><a href="#问题2" class="headerlink" title="问题2"></a>问题2</h4><p>浏览器发出ftp请求后，不停的弹出ftp登录页面，即使用户名密码都是对的。<br>请执行：</p>
+<p><code>sudo usermod -d /var/www/ ftpuser</code></p>
+<p>来指定你ftpuser的主目录。</p>
+
             </div>
             <hr/>
 
@@ -542,7 +569,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/06/24/others/s/">http://yoursite.com/2020/06/24/others/s/</a>
+                    <a href="http://yoursite.com/2020/07/01/development/linux/AWS%E4%B8%8ARHEL-ec2-vsftpd%E6%90%AD%E5%BB%BA%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/">http://yoursite.com/2020/07/01/development/linux/AWS%E4%B8%8ARHEL-ec2-vsftpd%E6%90%AD%E5%BB%BA%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -748,7 +775,7 @@
         repo: 'fireflyuan.github.io/',
         owner: 'fireflyuan',
         admin: "fireflyuan",
-        id: '2020-06-24T22-02-03',
+        id: '2020-07-01T15-43-43',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -772,9 +799,58 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
+            <div class="card">
+                <a href="/2020/07/01/development/linux/AWS%E4%B8%8ARHEL-ec2-vsftpd%E6%90%AD%E5%BB%BA%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="AWS上RHEL-ec2 vsftpd搭建常见问题总结">
+                        
+                        <span class="card-title">AWS上RHEL-ec2 vsftpd搭建常见问题总结</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+浏览器端测试打开浏览器，地址栏输入：
+1234567回车，弹出输入用户名密码的窗口，确认，如果成功则会显示&#x2F;var&#x2F;www&#x2F;下的文件。两种常见的问题:#### 问题1浏览器的页面只显示：index of ,而
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/development/" class="post-category">
+                                    development
+                                </a>
+                            
+                            <a href="/categories/development/linux/" class="post-category">
+                                    linux
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2020/06/29/development/linux/Summary-of-FTP-building-up-in-RHEL/">
                     <div class="card-image">
@@ -796,9 +872,9 @@ server - RHEL
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -842,48 +918,6 @@ server - RHEL
                         <span class="chip bg-color">FileZilla</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/06/24/others/my-diary/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="my diary">
-                        
-                        <span class="card-title">my diary</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            #diary of 6.24
-123456789Carateres portugueses com teclado inglês à è ì ò ù     1. ctrl+&#96;             2. letterá é í 
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-24
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/others/" class="post-category">
-                                    others
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
                 </div>
                 
             </div>
