@@ -501,21 +501,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2020-07-01
+                    2020-07-02
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    222
+                    612
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    2 Min
                 </div>
                 
 
@@ -531,20 +531,46 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <a id="more"></a>
-<h3 id="浏览器端测试"><a href="#浏览器端测试" class="headerlink" title="浏览器端测试"></a>浏览器端测试</h3><p>打开浏览器，地址栏输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">回车，弹出输入用户名密码的窗口，确认，如果成功则会显示&#x2F;var&#x2F;www&#x2F;下的文件。</span><br><span class="line">两种常见的问题:</span><br><span class="line">#### 问题1</span><br><span class="line">浏览器的页面只显示：index of ,而不显示任何ftp目录中文件或文件夹，执行：</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;sudo getsebool -a | grep ftp</span><br></pre></td></tr></table></figure>
-
-<p>如果你的结果是这样的：</p>
+<h3 id="综述"><a href="#综述" class="headerlink" title="综述"></a>综述</h3><p>上篇文章主要讲了如何在AWS-RHEL上搭建ftp服务器，由于各种原因，大家还是会遇到各种各样的问题，本篇文章来讨论下自己在搭建的过程中遇到的问题及解决方案。</p>
+<p>正常情况，打开浏览器，地址栏输入：<br><code>ftp://ip地址</code><br>回车，弹出输入用户名密码的窗口，确认，如果成功则会显示/var/www/下的文件，这里有两种常见的问题:</p>
+<h4 id="问题1：浏览器访问能够登录但不显示FTP目录"><a href="#问题1：浏览器访问能够登录但不显示FTP目录" class="headerlink" title="问题1：浏览器访问能够登录但不显示FTP目录"></a>问题1：浏览器访问能够登录但不显示FTP目录</h4><ol>
+<li><p>问题描述：<br>用户可以登录，但浏览器的页面只显示：index of ,而不显示任何ftp目录中文件或文件夹，这是由于selinux的机制。</p>
+</li>
+<li><p>解决方案：<br>执行<code>sudo getsebool -a | grep ftp</code><br>结果大概是这样的：</p>
 <figure class="highlight plain"><figcaption><span>--> off</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ftpd_connect_all_unreserved --&gt; on</span><br><span class="line">ftpd_connect_db --&gt; off</span><br><span class="line">ftpd_full_access --&gt; off</span><br><span class="line">ftpd_use_cifs --&gt; off</span><br><span class="line">ftpd_use_fusefs --&gt; off</span><br><span class="line">ftpd_use_nfs --&gt; off</span><br><span class="line">ftpd_use_passive_mode --&gt; off</span><br><span class="line">httpd_can_connect_ftp --&gt; off</span><br><span class="line">httpd_enable_ftp_server --&gt; off</span><br><span class="line">tftp_anon_write --&gt; off</span><br><span class="line">tftp_home_dir --&gt; off</span><br></pre></td></tr></table></figure>
-<p>执行；</p>
-<figure class="highlight plain"><figcaption><span>setsebool -P ftpd_full_access 1``` 将```ftpd_full_access```由off改成on.</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">再次执行</span><br><span class="line">&#96;&#96;&#96;sudo getsebool -a | grep ftp</span><br></pre></td></tr></table></figure>
+<p>如果你的ftpd_full_access 参数值为off,则执行<code>sudo setsebool -P ftpd_full_access 1</code> 将<code>ftpd_full_access</code>由off改成on.</p>
+</li>
+</ol>
+<p>再次执行</p>
+<figure class="highlight plain"><figcaption><span>getsebool -a | grep ftp```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">显示&#96;&#96;&#96;ftpd_full_access --&gt; on&#96;&#96;&#96;修改成功</span><br><span class="line"></span><br><span class="line">重启vsftpd服务，问题应该解决了。</span><br><span class="line"></span><br><span class="line">#### 问题2：反复弹出ftp登录页面</span><br><span class="line">1. 问题描述：</span><br><span class="line">正确输入ftp用户名密码确认后，浏览器仍不停的弹出ftp登录页面</span><br><span class="line">2. 解决方案：执行命令</span><br><span class="line">&#96;sudo usermod -d &#x2F;var&#x2F;www&#x2F; ftpuser&#96;</span><br><span class="line">来指定你ftpuser的主目录。</span><br><span class="line"></span><br><span class="line">#### 问题3：500 OOPS: can not change directory</span><br><span class="line">1. 问题描述：</span><br><span class="line">  Filezilla连接ftp服务器时报错：</span><br></pre></td></tr></table></figure>
+<p>  Response:   500 OOPS: cannot change directory:/home/www<br>  Error:  Critical error: Could not connect to server</p>
+<pre><code>2. 解决方案：指定ftp用户的主目录  
+`usermod -d /var/www/ ftpuser`
+这里注意，/var/www/ftpuser该路径要用绝对路径.
+#### 问题4： 530 Login incorrect
+1. 问题描述：在客户端登录vsftpd时报 530 login incorret 错误，这是登录过程中的鉴权失败的报错。
+2. 解决方案：
+* 方法i-注释掉/etc/pam.d/vsftpd文件里这后一行：auth required pam_shells.so，不去pam鉴权
+* 方法ii-在/etc/shells文件里面增加一行：/sbin/nologin,这样允许不能登录系统的用户通过鉴权
 
-<p>显示<code>ftpd_full_access --&gt; off</code></p>
-<p>重启vsftpd服务，问题应该解决了。</p>
-<h4 id="问题2"><a href="#问题2" class="headerlink" title="问题2"></a>问题2</h4><p>浏览器发出ftp请求后，不停的弹出ftp登录页面，即使用户名密码都是对的。<br>请执行：</p>
-<p><code>sudo usermod -d /var/www/ ftpuser</code></p>
-<p>来指定你ftpuser的主目录。</p>
+#### 附：vsftpd常见错误代码
 
+服务名：vsftpd.service  
+
+配置目录:：/etc/vsftpd  
+
+主配置文件:：/etc/vsftpd/vsftpd.conf  
+
+默认发布目录： /var/ftp  
+
+报错信息：
+|错误代码|原因|
+|:---:|:---:|
+|550|程序本身拒绝|
+|553|文件系统权限限制|
+|500|权限过大|
+|530|认证失败|
+</code></pre>
             </div>
             <hr/>
 
@@ -817,8 +843,8 @@
                     <div class="summary block-with-text">
                         
                             
-浏览器端测试打开浏览器，地址栏输入：
-1234567回车，弹出输入用户名密码的窗口，确认，如果成功则会显示&#x2F;var&#x2F;www&#x2F;下的文件。两种常见的问题:#### 问题1浏览器的页面只显示：index of ,而
+综述上篇文章主要讲了如何在AWS-RHEL上搭建ftp服务器，由于各种原因，大家还是会遇到各种各样的问题，本篇文章来讨论下自己在搭建的过程中遇到的问题及解决方案。
+正常情况，打开浏览器，地址栏输入：ftp://ip地址回车，弹出输入用户名
                         
                     </div>
                     <div class="publish-info">
