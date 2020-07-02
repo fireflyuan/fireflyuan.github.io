@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Fireflyuan">
+    <meta name="keywords" content="Jhipster学习系列(二), Fireflyuan">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -27,7 +27,7 @@
 </script>
 
 
-    <title>Hello World | Fireflyuan</title>
+    <title>Jhipster学习系列(二) | Fireflyuan</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -302,7 +302,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">Jhipster学习系列(二)</h1>
                 </div>
             </div>
         </div>
@@ -424,19 +424,6 @@
                 </div>
                 <div class="col s5 right-align">
                     
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/development/" class="post-category">
-                                development
-                            </a>
-                        
-                            <a href="/categories/development/web-dev/" class="post-category">
-                                web dev
-                            </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
 
@@ -444,28 +431,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-06-18
+                    2018-05-01
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2020-06-25
+                    2020-07-02
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    73
+                    594
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    2 Min
                 </div>
                 
 
@@ -480,21 +467,33 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<a id="more"></a>
+                <a id="more"></a>
 
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p>上文参见：jhipster学习系列（一）</p>
+<h3 id="jhipster生成微服务项目及其配置"><a href="#jhipster生成微服务项目及其配置" class="headerlink" title="jhipster生成微服务项目及其配置"></a>jhipster生成微服务项目及其配置</h3><p>创建jhipster-registry（这里有坑，至少在国内看来是有些bug的，不过还好查了些资料可以解决）</p>
+<p>直接从github上拉取jhipster-registry代码：</p>
+<p><code>git clone https://github.com/jhipster/jhipster-registry.git</code></p>
+<p>进入jhipster-registry目录后：</p>
+<p>运行</p>
+<p><code>yarn</code></p>
+<p>会报错，查看提示，是node-sass的问题，所以</p>
+<p><code>yarn add global node-sass@4.8.0</code></p>
+<p>这里必须要加版本号，不然的话默认安装的好像是4.5版本的，与node8不兼容（我的node版本），这里的兼容情况可以在github里找到node-sass的releases里tag里找到.</p>
+<p>另外，yarn的全局安装目录应该是<code>C:\Users\Administrator\AppData\Local\Yarn\Data\global\node_modules</code>(这是我的，仅作参考).<br>运行会报错，在你的<a href="mailto:node-sass@4.8.0github">node-sass@4.8.0github</a>上下载不到<code>win32-x64-57_binding.node</code>文件，所以需要自己先下载下来， </p>
+<p>下载地址：<a href="https://github.com/sass/node-sass/releases/tag/v4.8.0" target="_blank" rel="noopener">点击下载</a></p>
+<p>至于为什么是win32-x64-57_binding.node这个版本，可以用这个命令查看自己环境的适配版本：</p>
+<p><code>node -p &quot;[process.platform, process.arch, process.versions.modules].join(&#39;-&#39;)&quot;</code></p>
+<p>设置sass路径：</p>
+<p><code>set SASS_BINARY_PATH=D:/nodejs/.nodes/win32-x64-57_binding.node</code></p>
+<p>再次安装node-sass，这样应该还会报错，根据提示，应该是phantomjs环境问题，jhipster-registry前端打包需要phantomjs环境，在命令执行过程中会下载一个文件phantomjs-2.1.1-windows.zip，但是这个境外的下载会出问题一直下不下来，所以报错，解决办法是在这里下载这个文件：</p>
+<p><a href="http://qiniu.huicode.top/soft/phantomjs-2.1.1-macosx.zip" target="_blank" rel="noopener">http://qiniu.huicode.top/soft/phantomjs-2.1.1-macosx.zip</a><br><a href="http://qiniu.huicode.top/soft/phantomjs-2.1.1-linux-x86_64.tar.bz2" target="_blank" rel="noopener">http://qiniu.huicode.top/soft/phantomjs-2.1.1-linux-x86_64.tar.bz2</a><br><a href="http://qiniu.huicode.top/soft/phantomjs-2.1.1-windows.zip" target="_blank" rel="noopener">http://qiniu.huicode.top/soft/phantomjs-2.1.1-windows.zip</a><br>//qiniu.huicode.top/soft/phantomjs-2.1.1-macosx.zip<br><a href="http://qiniu.huicode.top/soft/phantomjs-2.1.1-linux-x86_64.tar.bz2" target="_blank" rel="noopener">http://qiniu.huicode.top/soft/phantomjs-2.1.1-linux-x86_64.tar.bz2</a><br><a href="http://qiniu.huicode.top/soft/phantomjs-2.1.1-windows.zip" target="_blank" rel="noopener">http://qiniu.huicode.top/soft/phantomjs-2.1.1-windows.zip</a></p>
+<p>然后把压缩包放在这个目录（报错会提示这个目录，这是我的）：</p>
+<p><code>C:\Users\Administrator\AppData\Local\Temp\phantomjs</code><br>重新运行命令<br><code>yarn add global node-sass@4.8.0</code><br>build成功<br>执行：<br><code>mvnw</code><br>成功后浏览器打开localhost：8080，界面：<br>​​​​​​<img src="https://raw.githubusercontent.com/fireflyuan/picbed/master/blog_files/images/github_picbed20200702163822.png" alt=""></p>
+<p>登陆后<br><img src="https://raw.githubusercontent.com/fireflyuan/picbed/master/blog_files/images/github_picbed20200702163848.png" alt=""></p>
+<p>（注：最近在网上发现另外一种方法，直接运行下面指令配置sass国内镜像：</p>
+<p><code>yarn config set sass_binary_site http://cdn.npm.taobao.org/dist/node-sass -g</code></p>
+<p>就避免了安装sass时遇到的各种问题了，这种方法应该也是可以的）</p>
+<p>后续内容见下篇博客：</p>
 
             </div>
             <hr/>
@@ -520,7 +519,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/06/18/development/web%20dev/hello-world/">http://yoursite.com/2020/06/18/development/web%20dev/hello-world/</a>
+                    <a href="http://yoursite.com/2018/05/01/Jhipster%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97-%E4%BA%8C/">http://yoursite.com/2018/05/01/Jhipster%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97-%E4%BA%8C/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -726,7 +725,7 @@
         repo: 'fireflyuan.github.io/',
         owner: 'fireflyuan',
         admin: "fireflyuan",
-        id: '2020-06-18T12-40-10',
+        id: '2018-05-01T15-21-07',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -754,19 +753,19 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2020/06/18/network/Understanding-DNS-Beginners-Guide-to-DNS/">
+                <a href="/2020/06/18/development/web%20dev/hello-world/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Beginners Guide to DNS">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
                         
-                        <span class="card-title">Beginners Guide to DNS</span>
+                        <span class="card-title">Hello World</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            dns (domain name system) is one of the most important technologies/services on the internet, as without it the internet 
+                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
                         
                     </div>
                     <div class="publish-info">
@@ -777,21 +776,17 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/network/" class="post-category">
-                                    network
+                            <a href="/categories/development/" class="post-category">
+                                    development
+                                </a>
+                            
+                            <a href="/categories/development/web-dev/" class="post-category">
+                                    web dev
                                 </a>
                             
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/dns/">
-                        <span class="chip bg-color">dns</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -803,13 +798,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2018/05/01/Jhipster%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97-%E4%BA%8C/">
+                <a href="/2018/04/28/Jhipster%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97-%E4%B8%80/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Jhipster学习系列(二)">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Jhipster学习系列(一)">
                         
-                        <span class="card-title">Jhipster学习系列(二)</span>
+                        <span class="card-title">Jhipster学习系列(一)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -817,14 +812,13 @@
                         
                             
 
-上文参见：jhipster学习系列（一）
-jhipster生成微服务项目及其配置创建jhipster-registry（这里有坑，至少在国内看来是有些bug的，不过还好查了些资料可以解决）
-直接从github上拉取jhipster-re
+jHipster简介
+JHipster或者称Java Hipster，是一个应用代码产生器，能够创建Spring Boot +AngularJS的应用。开源项目地址：JHipster/Github.JHipster使用Node.js和Y
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2018-05-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2018-04-28
                             </span>
                         <span class="publish-author">
                             
@@ -833,6 +827,14 @@ jhipster生成微服务项目及其配置创建jhipster-registry（这里有坑�
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/jhipster/">
+                        <span class="chip bg-color">jhipster</span>
+                    </a>
+                    
                 </div>
                 
             </div>
