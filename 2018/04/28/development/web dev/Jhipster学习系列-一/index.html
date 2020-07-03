@@ -570,7 +570,7 @@
 <li><p>可以将应用构建成一个标准的 WAR 文件或者一个可执行的 JAR 文件</p>
 </li>
 </ul>
-<h3 id="环境："><a href="#环境：" class="headerlink" title="环境："></a>环境：</h3><p>假设你已具备下列环境：<br>JDK 8+<br>Maven或者Gradle<br>NodeJs<br>MySql（可选）<br>Git<br>Eclipse或Intellij IDEA<br>window 管理员权限的 cmd、PowerShell或者cmder<br>阿里maven镜像<br>JHipster 4.0+ 推荐使用yarn替代npm进行包管理</p>
+<h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><p>假设你已具备下列环境：<br>JDK 8+<br>Maven或者Gradle<br>NodeJs<br>MySql（可选）<br>Git<br>Eclipse或Intellij IDEA<br>window 管理员权限的 cmd、PowerShell或者cmder<br>阿里maven镜像<br>JHipster 4.0+ 推荐使用yarn替代npm进行包管理</p>
 <h3 id="安装-yarn"><a href="#安装-yarn" class="headerlink" title="安装 yarn"></a>安装 yarn</h3><ol>
 <li>下载最新版yarn压缩包 <code>latest.tar.gz</code></li>
 <li>解压其中的 dist 里面的内容到本地文件夹,例如 <code>d:\yarn</code></li>
@@ -590,10 +590,10 @@ registry</code> 则 registry 重置成默认库 <code>https://registry.yarnpkg.c
 <li>安装 JHipster: <code>yarn global add generator-jhipster</code><br><code>xx@version</code> 是安装指定版本，若未指定，则是最新的<br>至此，JHipster已经安装完毕</li>
 </ol>
 <h3 id="jhispter生成单体项目"><a href="#jhispter生成单体项目" class="headerlink" title="jhispter生成单体项目"></a>jhispter生成单体项目</h3><p>这一部分很简单，官方文档写得很清楚 ： <a href="https://www.jhipster.tech/creating-an-app/" target="_blank" rel="noopener">jhipster创建应用</a></p>
-<h3 id="创建综合应用"><a href="#创建综合应用" class="headerlink" title="创建综合应用:"></a>创建综合应用:</h3><p><code>mkdir jhipster\app</code><br><code>cd jhipster\app</code><br><code>yo jhipster</code></p>
+<h3 id="创建综合应用"><a href="#创建综合应用" class="headerlink" title="创建综合应用"></a>创建综合应用</h3><p><code>mkdir jhipster\app</code><br><code>cd jhipster\app</code><br><code>yo jhipster</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><span class="line">? (1&#x2F;15) Which *type* of application would you like to create? (</span><br><span class="line">Use arrow keys) &#x2F;&#x2F;选择创建的应用类型</span><br><span class="line">&gt; Monolithic application (recommended for simple projects) &#x2F;&#x2F;综合</span><br><span class="line">应用</span><br><span class="line">Microservice application &#x2F;&#x2F;微服务应用</span><br><span class="line">Microservice gateway &#x2F;&#x2F;微服务网关</span><br><span class="line">[BETA] JHipster UAA server (for microservice OAuth2 authenticat</span><br><span class="line">ion) &#x2F;&#x2F;微服务OAuth2的身份认证服务</span><br><span class="line">? (2&#x2F;15) Which *Framework* would you like to use for the client?</span><br><span class="line">&#x2F;&#x2F;选择AngularJS 版本</span><br><span class="line">AngularJS 1.x</span><br><span class="line">&gt; [BETA] Angular 2.x</span><br><span class="line">? (3&#x2F;15) What is the base name of your application? (app) &#x2F;&#x2F;服务</span><br><span class="line">名</span><br><span class="line">? (4&#x2F;15) Would you like to install other generators from the JHi</span><br><span class="line">pster Marketplace? No &#x2F;&#x2F;从JHipster Marketplace 安装其他生成器</span><br><span class="line">? (5&#x2F;15) What is your default Java package name? (com.shunneng.a</span><br><span class="line">pp) &#x2F;&#x2F;默认包名</span><br><span class="line">? (6&#x2F;15) Which *type* of authentication would you like to use? (</span><br><span class="line">Use arrow keys) &#x2F;&#x2F;选择认证方式</span><br><span class="line">&gt; HTTP Session Authentication (stateful, default Spring Security</span><br><span class="line">mechanism) &#x2F;&#x2F;Spring Security默认机制 基于HTTP会话的认证方式(带状态)</span><br><span class="line">OAuth2 Authentication (stateless, with an OAuth2 server impleme</span><br><span class="line">ntation) &#x2F;&#x2F;OAuth2的认证实现(无状态)</span><br><span class="line">JWT authentication (stateless, with a token) &#x2F;&#x2F;J(son)W(eb)T(oke</span><br><span class="line">n)(无状态)</span><br><span class="line">? (7&#x2F;15) Which *type* of database would you like to use? (Use ar</span><br><span class="line">row keys) &#x2F;&#x2F;选择数据库类型</span><br><span class="line">&gt; SQL (H2, MySQL, MariaDB, PostgreSQL, Oracle) &#x2F;&#x2F;关系型数据库</span><br><span class="line">MongoDB &#x2F;&#x2F;NoSQL</span><br><span class="line">Cassandra &#x2F;&#x2F;NoSQL</span><br><span class="line">? (8&#x2F;15) Which *production* database would you like to use? (Use</span><br><span class="line">arrow keys) &#x2F;&#x2F;生产数据库</span><br><span class="line">&gt; MySQL</span><br><span class="line">MariaDB</span><br><span class="line">PostgreSQL</span><br><span class="line">Oracle - Warning! The Oracle JDBC driver (ojdbc) is not bundle</span><br><span class="line">d because it is not Open Source. Please follow our documentation</span><br><span class="line">to instal l it manually.</span><br><span class="line">Microsoft SQL Server</span><br><span class="line">? (9&#x2F;15) Which *development* database would you like to use? (Us</span><br><span class="line">e arrow keys) &#x2F;&#x2F;开发数据库</span><br><span class="line">&gt; H2 with disk-based persistence &#x2F;&#x2F;数据存储在磁盘的H2</span><br><span class="line">H2 with in-memory persistence &#x2F;&#x2F;内存H2（服务关闭数据丢失）</span><br><span class="line">MySQL</span><br><span class="line">? (10&#x2F;15) Do you want to use Hibernate 2nd level cache? (Use arr</span><br><span class="line">ow keys) &#x2F;&#x2F;Hibernate 二级缓存</span><br><span class="line">No</span><br><span class="line">&gt; Yes, with ehcache (local cache, for a single node) &#x2F;&#x2F;本地缓存方</span><br><span class="line">案 ehcache</span><br><span class="line">Yes, with HazelCast (distributed cache, for multiple nodes) &#x2F;&#x2F;</span><br><span class="line">集群缓存方案，多节点缓存，适合多微服务的分布式环境</span><br><span class="line">? (11&#x2F;15) Would you like to use Maven or Gradle for building the</span><br><span class="line">backend? (Use arrow keys) &#x2F;&#x2F;选择后台构建系统</span><br><span class="line">&gt; Maven &#x2F;&#x2F;更成熟，稳定，用户群体更大</span><br><span class="line">Gradle &#x2F;&#x2F;更灵活，易于扩展，支持maven一键转Gradle</span><br><span class="line">? (12&#x2F;15) Which other technologies would you like to use? (Press</span><br><span class="line">&lt;space&gt; to select) &#x2F;&#x2F;可选技术</span><br><span class="line">&gt;( ) Social login (Google, Facebook, Twitter) &#x2F;&#x2F;第三方社交登录，基</span><br><span class="line">于OAuth2.0</span><br><span class="line">( ) Search engine using ElasticSearch &#x2F;&#x2F;集成搜索开源搜索引擎 Elast</span><br><span class="line">icSearch</span><br><span class="line">( ) Clustered HTTP sessions using Hazelcast &#x2F;&#x2F;使用Hazelcast管理h</span><br><span class="line">ttp session集群</span><br><span class="line">( ) WebSockets using Spring Websocket &#x2F;&#x2F;使用Spring Websocket</span><br><span class="line">( ) [BETA] Asynchronous messages using Apache Kafka &#x2F;&#x2F;Apache Ka</span><br><span class="line">fka 是一种高吞吐量的分布式发布订阅消息系统</span><br><span class="line">? (13&#x2F;15) Would you like to use the LibSass stylesheet preproces</span><br><span class="line">sor for your CSS? (y&#x2F;N) &#x2F;&#x2F;建议使用gulp定时构建，将sass转换成css而不是</span><br><span class="line">运行时处理</span><br><span class="line">? (14&#x2F;15) Would you like to enable internationalization support?</span><br><span class="line">(Y&#x2F;n) &#x2F;&#x2F;是否使用国际化</span><br><span class="line">? Please choose the native language of the application? (Use arr</span><br><span class="line">ow keys) &#x2F;&#x2F;选择本地化语言</span><br><span class="line">Catalan</span><br><span class="line">&gt; Chinese (Simplified) &#x2F;&#x2F;中文简体</span><br><span class="line">Chinese (Traditional)</span><br><span class="line">Czech</span><br><span class="line">Danish</span><br><span class="line">Dutch</span><br><span class="line">English</span><br><span class="line">(Move up and down to reveal more choices)</span><br><span class="line">? Please choose additional languages to install (Press &lt;space&gt; t</span><br><span class="line">o select)&#x2F;&#x2F;选择其余支持语言</span><br><span class="line">&gt;( ) Catalan</span><br><span class="line">( ) Chinese (Traditional)</span><br><span class="line">( ) Czech</span><br><span class="line">( ) Danish</span><br><span class="line">( ) Dutch</span><br><span class="line">( ) English</span><br><span class="line">( ) French</span><br><span class="line">(Move up and down to reveal more choices)</span><br><span class="line">? (15&#x2F;15) Which testing frameworks would you like to use? (Press</span><br><span class="line">&lt;space&gt; to select) &#x2F;&#x2F;默认情况下 JHipster 提供 java 单元&#x2F;集成测试（使</span><br><span class="line">用Spring JUnit支持）和 JavaScript 单元测试（使用Karma.js）。这也是一个</span><br><span class="line">可选项。</span><br><span class="line">&gt;( ) Gatling &#x2F;&#x2F;使用 Gatling 进行性能测试。</span><br><span class="line">( ) Cucumber &#x2F;&#x2F;使用 Cucumber 模拟用户行为</span><br><span class="line">( ) Protractor &#x2F;&#x2F;使用 Protractor 对 AngularJS 进行集成测试</span><br></pre></td></tr></table></figure>
 <p>第一次创建比较慢，后边如果要创建综合应用或者微服务网关应用，可以将<br><code>node_modules</code> 复制到其目录下面。<br>项目生成后，windows/系统在项目根目录运行<code>mvnw</code>，浏览器打开<code>localhost：8080</code>就会进入jhipster的界面，登陆后就可以看到：<br><img src="https://raw.githubusercontent.com/fireflyuan/picbed/master/blog_files/images/github_picbed20200702171030.png" alt=""></p>
-<p>避免文章过长，后续内容参见下一篇博客:jhipster学习系列（二）</p>
+<p>避免文章过长，后续内容参见下一篇博客:<a href="http://localhost:4000/2018/05/01/development/web%20dev/Jhipster%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97-%E4%BA%8C/" target="_blank" rel="noopener">Jhipster学习系列（二）</a></p>
 
             </div>
             <hr/>
@@ -857,7 +857,7 @@ registry</code> 则 registry 重置成默认库 <code>https://registry.yarnpkg.c
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2018/05/01/Jhipster%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97-%E4%BA%8C/">
+                <a href="/2018/05/01/development/web%20dev/Jhipster%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97-%E4%BA%8C/">
                     <div class="card-image">
                         
                         
@@ -871,7 +871,7 @@ registry</code> 则 registry 重置成默认库 <code>https://registry.yarnpkg.c
                         
                             
 
-上文参见：jhipster学习系列(一)
+上文参见：jhipster学习系列（一）
 jhipster生成微服务项目及其配置创建jhipster-registry（这里有坑，至少在国内看来是有些bug的，不过还好查了些资料可以解决）
 直接从github上拉取jhipster-re
                         
@@ -882,19 +882,19 @@ jhipster生成微服务项目及其配置创建jhipster-registry（这里有坑�
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Junliang Yuan
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/development/" class="post-category">
+                                    development
+                                </a>
+                            
+                            <a href="/categories/development/web-dev/" class="post-category">
+                                    web dev
+                                </a>
+                            
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/jhipster/">
-                        <span class="chip bg-color">jhipster</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -906,32 +906,38 @@ jhipster生成微服务项目及其配置创建jhipster-registry（这里有坑�
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2018/04/28/Jhipster%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97-%E4%B8%80/">
+                <a href="/2018/03/27/development/linux/win7%E4%B8%8B%E5%AE%89%E8%A3%85Ubuntu16-04%E5%8F%8C%E7%B3%BB%E7%BB%9F/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Jhipster学习系列(一)">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="win7下安装Ubuntu16.04双系统">
                         
-                        <span class="card-title">Jhipster学习系列(一)</span>
+                        <span class="card-title">win7下安装Ubuntu16.04双系统</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
                             
-
-jHipster简介
-JHipster或者称Java Hipster，是一个应用代码产生器，能够创建Spring Boot +AngularJS的应用。开源项目地址：JHipster/Github.JHipster使用Node.js和Y
+概述Ubuntu16.04作为目前一款比较经典的ubuntu系统，相信很多人都想在自己的电脑上安装一下，然而系统的安装方法各式各样，u盘法、grub引导法等等，这里我将介绍在win7系统下用easyBCD软件建立引导，然后安装ubuntu
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2018-04-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2018-03-27
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Junliang Yuan
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/development/" class="post-category">
+                                    development
+                                </a>
+                            
+                            <a href="/categories/development/linux/" class="post-category">
+                                    linux
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -939,8 +945,12 @@ JHipster或者称Java Hipster，是一个应用代码产生器，能够创建Spr
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/jhipster/">
-                        <span class="chip bg-color">jhipster</span>
+                    <a href="/tags/ubuntu/">
+                        <span class="chip bg-color">ubuntu</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/">
+                        <span class="chip bg-color">双系统</span>
                     </a>
                     
                 </div>

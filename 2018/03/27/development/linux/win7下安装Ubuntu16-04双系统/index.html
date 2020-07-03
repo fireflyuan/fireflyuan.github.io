@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="my diary, Fireflyuan">
+    <meta name="keywords" content="win7下安装Ubuntu16.04双系统, Fireflyuan">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -27,7 +27,7 @@
 </script>
 
 
-    <title>my diary | Fireflyuan</title>
+    <title>win7下安装Ubuntu16.04双系统 | Fireflyuan</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -297,12 +297,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">my diary</h1>
+                    <h1 class="description center-align post-title">win7下安装Ubuntu16.04双系统</h1>
                 </div>
             </div>
         </div>
@@ -417,9 +417,17 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/ubuntu/">
+                                <span class="chip bg-color">ubuntu</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/">
+                                <span class="chip bg-color">双系统</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -427,8 +435,12 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/others/" class="post-category">
-                                others
+                            <a href="/categories/development/" class="post-category">
+                                development
+                            </a>
+                        
+                            <a href="/categories/development/linux/" class="post-category">
+                                linux
                             </a>
                         
                     </div>
@@ -440,28 +452,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-06-24
+                    2018-03-27
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2020-06-25
+                    2020-07-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    57
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    4 Min
                 </div>
                 
 
@@ -476,10 +488,50 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>#diary of 6.24</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Carateres portugueses com teclado inglês </span><br><span class="line">à è ì ò ù     1. ctrl+&#96;             2. letter</span><br><span class="line">á é í ó ú     1. ctrl+’              2. letter</span><br><span class="line">â ê î ô û      1. crtl+shift+^    2. Letter</span><br><span class="line">Â                1. crtl+shift+^    2. Shift+letter</span><br><span class="line">ç                1. ctrl+,              2. C</span><br><span class="line">ã õ             1. crtl+shift+~    2. letter</span><br><span class="line">Ã                1. crtl+shift+~    2. Shift+letter</span><br><span class="line">ä ë ï ö ü     1. crtl+shift+:     2. letter</span><br></pre></td></tr></table></figure>
-
-<p>this is portugues type board</p>
+                <a id="more"></a>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Ubuntu16.04作为目前一款比较经典的ubuntu系统，相信很多人都想在自己的电脑上安装一下，然而系统的安装方法各式各样，u盘法、grub引导法等等，这里我将介绍在win7系统下用<code>easyBCD</code>软件建立引导，然后安装ubuntu的方法，这就不需要制作u盘启动盘那么麻烦，只需配置一些引导文件即可。<br><img src="https://raw.githubusercontent.com/fireflyuan/picbed/master/blog_files/images/github_picbed20200703010252.png" alt=""></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="1-工具-原料"><a href="#1-工具-原料" class="headerlink" title="1.工具/原料"></a>1.工具/原料</h3><p><code>win7操作系统</code><br><code>ubuntu16.04系统镜像文件</code><br><code>easyBCD 2.2</code></p>
+<h3 id="2-安装系统的前期准备"><a href="#2-安装系统的前期准备" class="headerlink" title="2. 安装系统的前期准备"></a>2. 安装系统的前期准备</h3><ul>
+<li>在网上下载<code>ubuntu-16.04-desktop-amd64.iso</code>，百度搜索一下，很多网站都有下载链接，同时准备好<code>easyBCD</code>软件（网上下载最新版）。建议将iso文件移动到d盘根目录，当然也可以放到别的目录。<br><img src="https://raw.githubusercontent.com/fireflyuan/picbed/master/blog_files/images/github_picbed20200703010350.png" alt=""></li>
+<li>打开<code>easyBCD</code>软件，可以看到目前只有一个win7启动项。选择“添加新条目”，然后选择<code>NeoGrub</code>，点击“安装”。<br><img src="https://raw.githubusercontent.com/fireflyuan/picbed/master/blog_files/images/github_picbed20200703010448.png" alt=""><br><img src="https://raw.githubusercontent.com/fireflyuan/picbed/master/blog_files/images/github_picbed20200703010531.png" alt=""></li>
+<li>然后点击配置<br><img src="https://raw.githubusercontent.com/fireflyuan/picbed/master/blog_files/images/github_picbed20200703010604.png" alt=""></li>
+</ul>
+<p>并将<code>menu.lst</code>文件的内容替换成以下文本：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">title Install Ubuntu</span><br><span class="line">root (hd0,1)</span><br><span class="line">kernel (hd0,1)&#x2F;vmlinuz.efi boot&#x3D;casper iso-scan&#x2F;filename&#x3D;&#x2F;ubuntu-16.04-desktop-amd64.iso locale&#x3D;zh_CN.UTF-8</span><br><span class="line">initrd (hd0,1)&#x2F;initrd.lz</span><br><span class="line">title reboot</span><br><span class="line">reboot</span><br><span class="line">title halt</span><br><span class="line">halt</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/fireflyuan/picbed/master/blog_files/images/github_picbed20200703010850.png" alt=""><br><img src="https://raw.githubusercontent.com/fireflyuan/picbed/master/blog_files/images/github_picbed20200703010941.png" alt=""><br><strong>说明</strong>：<code>hd0</code>表示d盘所处的硬盘号，一般电脑只有一个，所以都是hd0；如果有多个硬盘，则根据情况改为hd0、hd1等。</p>
+<p><code>hd0</code>后面的数字表示d盘在硬盘中的分区顺序，每个人的系统不大一样，不知道的可以在磁盘管理里面看一下，本人d盘是第2个分区，因此写为<code>（hd0,1）</code>，如果是第一个，写为（hd0,0）即可。</p>
+<ul>
+<li>经过配置后，c盘中会多出一个“NST”文件夹和一个<code>NeoGrub</code>文件。接下来把系统镜像文件用<code>DAEMON tools</code>打开，或者以压缩包形式将其中两个文件解压出来，分别是initrd.lz和<code>vmlinuz.efi</code>，这两个文件在casper文件夹里。<br><img src="https://raw.githubusercontent.com/fireflyuan/picbed/master/blog_files/images/github_picbed20200703011119.png" alt=""></li>
+<li>将解压出来的两个文件复制到d盘根目录，可以看看d盘中添加了多少相关的文件。这样，安装系统的前期准备就完成了，可以重启电脑准备安装ubuntu16.04了。<br><img src="https://raw.githubusercontent.com/fireflyuan/picbed/master/blog_files/images/github_picbed20200703011225.png" alt=""></li>
+</ul>
+<h3 id="3-安装Ubuntu系统"><a href="#3-安装Ubuntu系统" class="headerlink" title="3. 安装Ubuntu系统"></a>3. 安装Ubuntu系统</h3><ul>
+<li><p>重启电脑，可以看到多了一个启动项<code>NeoGrub引导加载器</code>，选择该项enter，然后选择<code>install ubuntu</code>，另外两项分别是<code>reboot</code>和<code>halt</code>，是为了防止安装出错而设的，这个在之前的<code>menu.lst</code>配置文件中已经设定好了。<br><img src="https://raw.githubusercontent.com/fireflyuan/picbed/master/blog_files/images/github_picbed20200703011441.png" alt=""></p>
+</li>
+<li><p>接下来如果正常的话，会刷刷的满屏幕文字，很高端的样子，等着它结束就行。如果在这一步报错，一般来说就是之前的<code>menu.lst</code>配置文件不对，无法访问d盘，这时只要<code>reboot</code>然后进入win7重新配置就行。</p>
+</li>
+<li><p>刷完后就进入一个小系统，别以为这就装好了，此时最重要的一步，通过快捷键<code>ctrl+alt+T</code>打开终端，输入：<code>sudo umount -l /isodevice</code>， 注意空格和小写的L，执行后就可以双击安装图标进行安装了.<br><img src="https://raw.githubusercontent.com/fireflyuan/picbed/master/blog_files/images/github_picbed20200703011634.png" alt=""><br><img src="https://raw.githubusercontent.com/fireflyuan/picbed/master/blog_files/images/github_picbed20200703011718.png" alt=""><br><img src="https://raw.githubusercontent.com/fireflyuan/picbed/master/blog_files/images/github_picbed20200703011744.png" alt=""></p>
+</li>
+<li><p>接下来选择简体中文, 不用选中安装第三方软件和更新，否则安装会很慢，为保险起见可以断开网络连接, 安装类型选择<code>其他选项</code>。<br><img src="https://raw.githubusercontent.com/fireflyuan/picbed/master/blog_files/images/github_picbed20200703011841.png" alt=""></p>
+</li>
+<li><p>接下来需要设置分区，首先设置交换空间大小，与电脑内存差不多或为电脑内存的两倍。<br><img src="https://raw.githubusercontent.com/fireflyuan/picbed/master/blog_files/images/github_picbed20200703011856.png" alt=""><br><img src="https://raw.githubusercontent.com/fireflyuan/picbed/master/blog_files/images/github_picbed20200703011915.png" alt=""><br><img src="https://raw.githubusercontent.com/fireflyuan/picbed/master/blog_files/images/github_picbed20200703011935.png" alt=""></p>
+</li>
+<li><p>然后设置其他挂载点的大小，分区方案很多，这里简单的设置<code>/</code>、<code>/boot</code>、<code>/home</code>共3个分区，均为<code>ext4</code>文件系统。size分别为<code>/</code>10G；<code>/boot</code> 100M;<code>/home</code> 剩余所有空间。注意linux系统的1G对应1000M。<br><img src="https://raw.githubusercontent.com/fireflyuan/picbed/master/blog_files/images/github_picbed20200703011943.png" alt=""></p>
+</li>
+<li><p>接下来就是简单的设置地区、键盘布局，接着就是用户名和密码。<br><img src="https://raw.githubusercontent.com/fireflyuan/picbed/master/blog_files/images/github_picbed20200703012006.png" alt=""></p>
+</li>
+<li><p>以上所有东西都设置好了，就自动开始安装系统，等待一段时间就可以，如果安装过程在下载东西，可以点击<code>跳过</code>，因为系统安装完成后同样可以更新下载。</p>
+</li>
+<li><p>安装完成后点击<code>现在重启</code>，可以看到多了好多启动项，界面也变了。选择第一项<code>启动ubuntu</code>系统，这样就可以愉快的玩转ubuntu啦。<br><img src="https://raw.githubusercontent.com/fireflyuan/picbed/master/blog_files/images/github_picbed20200703012042.png" alt=""></p>
+</li>
+<li><p>安装完后，不要忘了回到win7系统打开<code>easyBCD</code>软件把<code>NeoGrub</code>引导项删除，否则每次进入win7都得选一次。如果觉得以后不想重装Ubuntu了，就可以把C盘的相关文件都删掉，节省空间.当然你也可以不将引导项删除，留着之后linux出问题了重装之用，如果嫌引导界面等待时间过长，可以自行设置，方法网上有，自行百度。<br><img src="https://raw.githubusercontent.com/fireflyuan/picbed/master/blog_files/images/github_picbed20200703012102.png" alt=""></p>
+</li>
+</ul>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li><code>menu.lst</code>的内容不要弄错，正确判别c盘的分区号</li>
+<li>进入小系统后别忘了执行指令<code>sudo umount -l /isodevice</code></li>
+<li>新手在为系统分区前可以先网上搜索一下分区方案</li>
+<li>小系统是可以直接联网操作的，如果遇到什么不懂的可以通过自带的火狐浏览器进行搜索</li>
+</ul>
 
             </div>
             <hr/>
@@ -505,7 +557,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/06/24/others/my-diary/">http://yoursite.com/2020/06/24/others/my-diary/</a>
+                    <a href="http://yoursite.com/2018/03/27/development/linux/win7%E4%B8%8B%E5%AE%89%E8%A3%85Ubuntu16-04%E5%8F%8C%E7%B3%BB%E7%BB%9F/">http://yoursite.com/2018/03/27/development/linux/win7%E4%B8%8B%E5%AE%89%E8%A3%85Ubuntu16-04%E5%8F%8C%E7%B3%BB%E7%BB%9F/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -542,7 +594,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/ubuntu/">
+                                    <span class="chip bg-color">ubuntu</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/">
+                                    <span class="chip bg-color">双系统</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -711,7 +771,7 @@
         repo: 'fireflyuan.github.io/',
         owner: 'fireflyuan',
         admin: "fireflyuan",
-        id: '2020-06-24T21-57-41',
+        id: '2018-03-27T00-35-42',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -739,91 +799,38 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2020/06/24/others/s/">
+                <a href="/2018/04/28/development/web%20dev/Jhipster%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97-%E4%B8%80/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="s">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Jhipster学习系列(一)">
                         
-                        <span class="card-title">s</span>
+                        <span class="card-title">Jhipster学习系列(一)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
                             
+
+jHipster简介
+JHipster或者称Java Hipster，是一个应用代码产生器，能够创建Spring Boot +AngularJS的应用。开源项目地址：JHipster/Github.JHipster使用Node.js和Y
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-24
+                            <i class="far fa-clock fa-fw icon-date"></i>2018-04-28
                         </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Junliang Yuan
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/06/18/tools/markdown-basic-syntax/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="markdown basic syntax">
-                        
-                        <span class="card-title">markdown basic syntax</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            This is abstract
-
-
-一. 标题
-在你的标题前加上#，几级标题就用几个#，例如：
-sara
-er二级标题斜体
-加粗
-删除线
-
-这是引用
-
-这是嵌套引用
-
-这也是嵌套引用
-
-这又又又是嵌套引用
-
-
-
-
-下面是分割线
-
-下面也是
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-18
-                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/tools/" class="post-category">
-                                    tools
+                            <a href="/categories/development/" class="post-category">
+                                    development
+                                </a>
+                            
+                            <a href="/categories/development/web-dev/" class="post-category">
+                                    web dev
                                 </a>
                             
                             
@@ -833,16 +840,67 @@ er二级标题斜体
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/blog/">
-                        <span class="chip bg-color">blog</span>
+                    <a href="/tags/jhipster/">
+                        <span class="chip bg-color">jhipster</span>
                     </a>
                     
-                    <a href="/tags/markdown/">
-                        <span class="chip bg-color">markdown</span>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Current&nbsp;<i class="far fa-dot-circle"></i>
+            </div>
+            <div class="card">
+                <a href="/2018/03/27/development/linux/win7%E4%B8%8B%E5%AE%89%E8%A3%85Ubuntu16-04%E5%8F%8C%E7%B3%BB%E7%BB%9F/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="win7下安装Ubuntu16.04双系统">
+                        
+                        <span class="card-title">win7下安装Ubuntu16.04双系统</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+概述Ubuntu16.04作为目前一款比较经典的ubuntu系统，相信很多人都想在自己的电脑上安装一下，然而系统的安装方法各式各样，u盘法、grub引导法等等，这里我将介绍在win7系统下用easyBCD软件建立引导，然后安装ubuntu
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2018-03-27
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/development/" class="post-category">
+                                    development
+                                </a>
+                            
+                            <a href="/categories/development/linux/" class="post-category">
+                                    linux
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/ubuntu/">
+                        <span class="chip bg-color">ubuntu</span>
                     </a>
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/">
+                        <span class="chip bg-color">双系统</span>
                     </a>
                     
                 </div>
