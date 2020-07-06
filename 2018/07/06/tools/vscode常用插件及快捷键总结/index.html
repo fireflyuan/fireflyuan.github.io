@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="持续集成，持续交付，持续部署（CI/CD）简介, Fireflyuan">
+    <meta name="keywords" content="VS Ccode常用插件及快捷键总结, Fireflyuan">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -27,7 +27,7 @@
 </script>
 
 
-    <title>持续集成，持续交付，持续部署（CI/CD）简介 | Fireflyuan</title>
+    <title>VS Ccode常用插件及快捷键总结 | Fireflyuan</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -297,12 +297,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">持续集成，持续交付，持续部署（CI/CD）简介</h1>
+                    <h1 class="description center-align post-title">VS Ccode常用插件及快捷键总结</h1>
                 </div>
             </div>
         </div>
@@ -419,27 +419,14 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Jenkins/">
-                                <span class="chip bg-color">Jenkins</span>
-                            </a>
-                        
-                            <a href="/tags/CI-CD/">
-                                <span class="chip bg-color">CI/CD</span>
+                            <a href="/tags/VS-Code/">
+                                <span class="chip bg-color">VS Code</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/tools/" class="post-category">
-                                tools
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -448,28 +435,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-07-02
+                    2018-07-06
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2020-07-02
+                    2020-07-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    2.9k
+                    1.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    9 Min
+                    5 Min
                 </div>
                 
 
@@ -485,106 +472,82 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <a id="more"></a>
-
-<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>软件开发周期中需要一些可以帮助开发者提升速度的自动化工具。其中工具最重要的目的是促进软件项目的持续集成与交付。通过CI/CD工具，开发团队可以保持软件更新并将其迅速的投入实践中。CI/CD也被认为是敏捷开发的最重要实践之一。</p>
-<p><img src="https://i.imgur.com/Aw83gvC.png" alt="CI/CD示意图"></p>
-<h3 id="持续集成"><a href="#持续集成" class="headerlink" title="持续集成"></a>持续集成</h3><p>从上图可以看到，持续集成应该至少包括以下几部分：</p>
-<ul>
-<li>自动化构建Continuous Build</li>
-<li>自动化测试Continuous Test</li>
-<li>自动化集成Continuous Intergration</li>
-</ul>
+<p>Visual Studio Code(VS Code) 是由微软开发的一款免费、跨平台的文本编辑器。这篇文章主要总结下常用的VS Code plugins and shortcut keys，which can greatly improve production efficiency.</p>
+<h2 id="VS-Code-常用插件"><a href="#VS-Code-常用插件" class="headerlink" title="VS Code 常用插件"></a>VS Code 常用插件</h2><p><strong>安装方法</strong>：打开vscode，左侧边栏的田字格即为插件市场.</p>
+<p><img src="https://raw.githubusercontent.com/fireflyuan/picbed/master/blog_files/images/github_picbed20200706110552.png" alt="插件市场"></p>
 <ol>
-<li>自动化构建</li>
+<li><p><code>Open-In-Browser</code><br>由于 VSCode 没有提供直接在浏览器中打开文件的内置功能，所以此插件在右键快捷菜单中添加了在默认浏览器查看文件选项，以及在客户端（Firefox，Chrome，IE）中打开命令面板选项。</p>
+</li>
+<li><p><code>prettier</code><br>一键美化你的 JavaScript/TypeScript/CSS 代码</p>
+</li>
+<li><p><code>vscode-icon</code><br>给vscode 资源树目录加上图标。</p>
+</li>
+<li><p><code>Auto Close Tag</code><br>自动闭合HTML/XML标签</p>
+</li>
+<li><p><code>Debugger for Chrome</code><br>映射chrome浏览器中debug</p>
+</li>
+<li><p><code>JavaScript(ES6) code snippets</code><br>ES6语法智能提示，以及快速输入，不仅仅支持.js，还支持.ts，.jsx，.tsx，.html，.vue，省去了配置其支持各种包含js代码文件的时间</p>
+</li>
+<li><p><code>markdown-extension-pack</code><br>这个插件包含了很多关于几乎所有关于markdown的常用插件.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Markdown All in One - All you need for Markdown (keyboard shortcuts, table of contents, auto    preview and more).</span><br><span class="line">markdownlint - Markdown&#x2F;CommonMark linting and    style checking for Visual Studio Code.</span><br><span class="line">Markdown PDF - This extension convert Markdown    file to pdf, html, png or jpeg file.</span><br><span class="line">Markdown+Math - Mdmath allows to use Visual    Studio Code as a markdown editor capable of    typesetting and rendering TeX math. In fact it    now reuses the built in markdown viewer. KaTeX    works inside as a fast math renderer.</span><br><span class="line">Markdown Preview Enhanced - Markdown Preview    Enhanced is an extension that provides you with    many useful functionalities such as automatic    scroll sync, math typesetting, mermaid, PlantUML,    pandoc, PDF export, code chunk, presentation    writer, etc.</span><br><span class="line">Markdown TOC - Generate TOC (table of contents)    of headlines from parsed markdown file.</span><br><span class="line">Markdown Table Prettifier - Makes tables more    readable for humans. Compatible with the Markdown    writer plugin&#39;s table formatter feature in Atom.</span><br><span class="line">Markdown Emoji - Adds :emoji: syntax support to    VS Code&#39;s built-in Markdown preview.</span><br><span class="line">:emojisense: - Adds suggestions and autocomplete    for emoji to VS Code.</span><br><span class="line">Path Autocomplete - Provides path completion for    visual studio code. Maybe can be used in    inserting file links in Markdown.</span><br><span class="line">Markdown Checkboxes - Adds support for Github&#39;s -    [ ] and - [x] checkbox syntax to VS Code&#39;s    built-in markdown preview.</span><br><span class="line">Markdown Preview Github Styling - Changes VS    Code&#39;s built-in markdown preview to match    Github&#39;s styling.</span><br><span class="line">Markdown Paste - Smartly paste for Markdown.</span><br><span class="line">Markdown Shortcuts - Handy shortcuts for editing    Markdown (.md, .markdown) files. You can also use    markdown formats in any other file.</span><br><span class="line">Excel to Markdown table - This VSCode extension    converts Excel data to Markdown table format.    Available through command Excel to Markdown table    and keyboard shortcut Shift+Alt+V.</span><br></pre></td></tr></table></figure>
+
+</li>
 </ol>
-<p>包括以下过程：</p>
+<h2 id="常用快捷键-注意：我的键盘home-end与left-right方向键是重合的，如果你不是我这种键盘，请格外注意"><a href="#常用快捷键-注意：我的键盘home-end与left-right方向键是重合的，如果你不是我这种键盘，请格外注意" class="headerlink" title="常用快捷键(注意：我的键盘home/end与left/right方向键是重合的，如果你不是我这种键盘，请格外注意)"></a>常用快捷键(注意：我的键盘home/end与left/right方向键是重合的，如果你不是我这种键盘，请格外注意)</h2><ol>
+<li>命令面板<br>它是 VS Code 快捷键的主要交互界面，你可以通过 <code>F1</code> 或者<code>Cmd+Shift+P</code>(<code>Windows</code> 上是 <code>Ctrl+Shift+P</code>) 打开.VS Code 的绝大多数命令都可以在命令面板里搜到,你可以在命令面板中快速搜索命令并且执行.</li>
+<li>左侧边栏快捷键<br>下图是VS Code 默认界面里的几个常用部件的位置和快捷键<br><img src="https://raw.githubusercontent.com/fireflyuan/picbed/master/blog_files/images/github_picbed20200706132011.png" alt="左侧边栏"></li>
+<li>编辑操作  </li>
+</ol>
 <ul>
-<li>将源码编译成为二进制码</li>
-<li>打包二进制码</li>
-<li>运行自动化测试</li>
-<li>生成文档</li>
-<li>生成分发媒体（例如：Debian DEB、Red Hat RPM或者Windows MSI文件）</li>
+<li>光标移动<ul>
+<li><code>ctrl+left/right</code><br>通常情况下，用<code>left/right</code>(左方向键和右方向键)移动鼠标光标是逐字母移动的，加上<code>ctrl</code>键以后，鼠标光标光标移动变为逐单词移动,如果光标在单词中间，此快捷键则先会将光标移动到单词前或单词后.这个功能只针对英文单词，对中文不起作用.</li>
+<li><code>home/end</code><br>将光标移动到行首或者行末.</li>
+<li><code>ctrl+home/end</code><br>将光标移动到文档的首末.</li>
+<li><code>ctrl+shift+\</code><br>相对于代码块的光标移动，这个快捷键将会使你的光标在的[],{},(),甚至html标签的开闭处切换.</li>
 </ul>
-<p>所以，自动化构建，从功能角度分，最关键的是三部分：版本控制工具、构建工具、CI服务器。而其中最核心的又是构建工具。其他开源的、与持续集成相关的工具也有很多，但大多数是辅助性的工具。</p>
-<p>(1)版本控制工具</p>
-<p>有时，版本控制又称为配置管理（SCM），所以版本控制工具同时也是配置管理工具。在各类版本控制的开源软件中，最著名的莫过于CVS、SVN（Subversion）、GIT三个了。<br>这三个工具各有千秋。其中，GIT支持离线工作，更适合开源软件或者开发人员不能集中办公情况下的版本管理工作。同时，SVN和GIT可以配合使用。</p>
-<p>（2）构建工具</p>
-<p>构建工具是持续集成的核心，它对源代码进行自动化编译、测试、代码检查，以及打包程序、部署（发布）到应用服务器上。从配置管理工具上下载最新源代码后，所有的后续工作几乎都可以通过构建工具完成。<br>在java开发中，比较有名的构建工具就是Ant、Maven、Gradle。在PHP开发中，Phing（基于Ant）也比较有名。同样的，Maven也可通过相关的PHP-Maven插件完成对PHP开发构建的支持。</p>
-<p>（3）CI服务器</p>
-<p>CI服务器的主要作用就是提供一个平台，用于整合版本控制和构建工作，并管理、控制自动化的持续集成。<br>开源软件中，比较有名的CI服务器包括Jenkins、CruiseControl、Continuum。而比较有名的商业化CI服务器是TeamCity、Bamboo、Pulse等。</p>
-<p>（4）其他工具</p>
-<p>很多工具可以通过与构建工具、CI工具相结合（当然，其中有很多工具也可以单独工作），来完成更多的自动测试、报告生成等工作。根据工具不同，其具体的结合方法也不同，但大体都是通过插件形式进行结合的。例如：</p>
+</li>
+<li>文本选择<ul>
+<li><code>ctrl+shift+left</code><br>选中从单词首到光标所在处的字母段</li>
+<li><code>home+shift</code><br>选中行首到光标所在处的所有字符</li>
+</ul>
+</li>
+<li>刪除操作<ul>
+<li><code>ctrl+shift+k</code><br>删除当前行</li>
+<li><code>Home+Shift</code>再<code>delete</code><br>将光标之前到行首之间的内容全部删除</li>
+<li><code>ctrl+delete</code>或者 <code>end+shift</code>再<code>delete</code><br>将光标之后到行末的内容全部删除</li>
+<li><code>ctrl+shift+left</code>再<code>delete</code><br>将单词开头到光标之间的部分删除</li>
+</ul>
+</li>
+<li>剪切<ul>
+<li><code>ctrl+x</code></li>
+</ul>
+</li>
+<li>换行(光标可以不在行末)<ul>
+<li><code>ctrl+enter</code><br>换行到下一行</li>
+<li><code>ctrl+shift+enter</code><br>换行到上一行（在当前行上新加一行并开始）</li>
+</ul>
+</li>
+<li>自定义快捷键<br>使用<code>F1</code>打开命令面板并输入：<code>shortcut</code>,找到，perference: open default keyboard shortcuts(json),便可以修改和自定义快捷键了.</li>
+<li>移动代码或代码段<br>先选中再<code>alt+up/down</code></li>
+<li>复制并移动代码段<br><code>alt+shift+up/down</code></li>
+</ul>
+<ol start="4">
+<li><p>添加注释</p>
+<p> <code>ctrl+shift</code><br> 无论是html还是js,系统会自动识别文档格式并添加相应的注释，非常方便.</p>
+</li>
+<li><p>代码格式化</p>
+<p><code>alt+shift+f</code><br>如果是第一次使用，如果你有安装多个格式化的插件，会让你选则一个默认的格式化方式.  </p>
+</li>
+<li><p>多光标</p>
+</li>
+</ol>
 <ul>
-<li>Maven中通过依赖和plugin方式引入第三方工具</li>
-<li>Jenkins主要通过各类插件引入第三方工具</li>
+<li>使用鼠标<br>按住<code>alt</code>键的同时选择第二个光标点，这样就实现了多处编辑.</li>
+<li><code>ctrl+alt+up/down</code><br>会在每行的同样位置出现光标点</li>
+<li>一个技巧<br>可以使用<code>ctrl+alt+up/down</code>结合<code>end</code>键将光标移动到行尾，再使用<code>left/right</code>移动到其他位置.</li>
+<li><code>ctrl+d</code><br>会选中光标所在的单词，如果再次<code>ctrl+d</code>，并在所有 相同单词后创建一个光标，这是移动光标，可以达到多处编译的效果</li>
 </ul>
-<p>这些工具种类实在太多，可以根据实际工作需要进行选择。</p>
-<p>2.自动化测试</p>
-<p>自动化测试是持续集成必不可少的一部分，基本上，没有自动化测试的持续集成，都很难称之为真正的持续集成。我们希望持续集成能够尽早的暴露问题，但这远非配置一个 Hudson/Jenkins服务器那么简单，只有真正用心编写了较为完整的测试用例，并一直维护它们，持续集成才能孜孜不倦地运行测试并第一时间报告问题。 </p>
-<p>测试自动化是使用特定的软件（独立于被测试的软件）来控制测试的执行以及比较实际输出与预期输出。测试自动化可以将某些重复但必要的任务自动化，或者执行某些难以手动执行的额外测试。</p>
-<p>自动化测试还包括单元测试、集成测试、系统测试、验收测试、性能测试等，在不同的场景下，它们都能为软件开发带来极大的价值。</p>
-<h3 id="持续交付"><a href="#持续交付" class="headerlink" title="持续交付"></a>持续交付</h3><p><img src="https://i.imgur.com/9j15a1a.png" alt="持续交付"></p>
-<p>持续交付（Continuous Delivery, CD）是一种软件工程的手段，让软件在短周期内产出，确保软件随时可以被可靠地发布。其目的在于更快、更频繁地构建、测试以及发布软件。通过加强对生产环境的应用进行渐进式更新，这种手段可以降低交付变更的成本与风险。一个简单直观的与可重复的部署过程对于持续交付来说是很重要的。</p>
-<p><img src="https://i.imgur.com/RrsuJwM.png" alt="持续交付过程"></p>
-<h3 id="持续部署"><a href="#持续部署" class="headerlink" title="持续部署"></a>持续部署</h3><p><img src="https://i.imgur.com/jOiFUHt.png" alt="持续部署"></p>
-<p>如图所示，持续部署与持续交付之间的差异就是前者将部署自动化了。<br>在持续交付的实践中，交付的目标是QA，但是实际上，软件最终是要交付到客户手上的。在SaaS领域里，持续部署采用得比较广泛，因为服务比较容易做到静默升级。<br>采用持续部署的前提是自动化测试的覆盖率足够高。<br>采用持续部署的好处是能减少运维的工作量，缩短新特性从开发到实际交付的周期。</p>
-<h3 id="CI-CD具体实现"><a href="#CI-CD具体实现" class="headerlink" title="CI/CD具体实现"></a>CI/CD具体实现</h3><p>常见CI/CD工具及其比较:</p>
-<p><img src="https://i.imgur.com/RA0UWd8.png" alt="CI/CD工具比较"></p>
-<p>这里的支持，意思应该是直接的支持，例如Jenkins，其实和git结合也很简单，通过脚本就可以实现。</p>
-<h3 id="持续集成工具集之-Jenkins简介"><a href="#持续集成工具集之-Jenkins简介" class="headerlink" title="持续集成工具集之 Jenkins简介"></a>持续集成工具集之 Jenkins简介</h3><p>Jenkins 是一个可扩展的持续集成引擎。</p>
-<p>1.主要用于：</p>
-<ul>
-<li>持续、自动地构建/测试软件项目。</li>
-<li>监控一些定时执行的任务。Jenkins拥有的特性包括：</li>
-</ul>
-<p>2.Jenkins拥有的特性包括：</p>
-<ul>
-<li>易于安装-只要把jenkins.war部署到servlet容器，不需要数据库支持。</li>
-<li>易于配置-所有配置都是通过其提供的web界面实现。</li>
-<li>集成RSS/E-mail通过RSS发布构建结果或当构建完成时通过e-mail通知。</li>
-<li>生成JUnit/TestNG测试报告</li>
-<li>分布式构建支持Jenkins能够让多台计算机一起构建/测试。</li>
-<li>文件识别:Jenkins能够跟踪哪次构建生成哪些jar，哪次构建使用哪个版本的jar等。</li>
-<li>插件支持:支持扩展插件，你可以开发适合自己团队使用的工具。</li>
-</ul>
-<p>3.Jenkins的出现</p>
-<p>目前持续集成(CI)已成为当前许多软件开发团队在整个软件开发生命周期内侧重于保证代码质量的常见做法。它是一种实践，旨在缓和和稳固软件的构建过程。并且能够帮助您的开发团队应对如下挑战：</p>
-<ul>
-<li>软件构建自动化 ：配置完成后，CI系统会依照预先制定的时间表，或者针对某特定事件，对目标软件进行构建。</li>
-<li>构建可持续的自动化检查 ：CI系统能持续地获取新增或修改后签入的源代码，也就是说，当软件开发团队需要周期性的检查新增或修改后的代码时，CI系统会不断确认这些新代码是否破坏了原有软件的成功构建。这减少了开发者们在检查彼此相互依存的代码中变化情况需要花费的时间和精力。</li>
-<li>构建可持续的自动化测试 ：构建检查的扩展部分，构建后执行预先制定的一套测试规则，完成后触发通知(Email,RSS等等)给相关的当事人。</li>
-<li>生成后后续过程的自动化 :当自动化检查和测试成功完成，软件构建的周期中可能也需要一些额外的任务，诸如生成文档、打包软件、部署构件到一个运行环境或者软件仓库。这样，构件才能更迅速地提供给用户使用。</li>
-</ul>
-<p>部署一个CI系统需要的最低要求是，一个可获取的源代码的仓库，一个包含构建脚本的项目。</p>
-<p>下图概括了CI系统的基本结构：<br>4.使用Jenkins的一些理由：</p>
-<p><img src="https://i.imgur.com/uNmVJlW.jpg" alt="Jenkins工作示意图"></p>
-<p>该系统的各个组成部分是按如下顺序来发挥作用的：</p>
-<ul>
-<li>开发者检入代码到源代码仓库。</li>
-<li>CI系统会为每一个项目创建了一个单独的工作区。当预设或请求一次新的构建时，它将把源代码仓库的源码存放到对应的工作区。</li>
-<li>CI系统会在对应的工作区内执行构建过程。</li>
-<li>（配置如果存在）构建完成后，CI系统会在一个新的构件中执行定义的一套测试。完成后触发通知(Email,RSS等等)给相关的当事人。</li>
-<li>（配置如果存在）如果构建成功，这个构件会被打包并转移到一个部署目标(如应用服务器)或存储为软件仓库中的一个新版本。软件仓库可以是CI系统的一部分，也可以是一个外部的仓库，诸如一个文件服务器或者像Java.NET、 SourceForge之类的网站。</li>
-<li>CI系统通常会根据请求发起相应的操作，诸如即时构建、生成报告，或者检索一些构建好的构件。</li>
-</ul>
-<p>Jenkins就是这么一个CI系统。之前叫做Hudson。</p>
-<ul>
-<li>是所有CI产品中在安装和配置上最简单</li>
-<li>基于Web访问，用户界面非常友好、直观和灵活，在许多情况下，还提供了AJAX的即时反馈。</li>
-<li>Jenkins是基于Java开发的(如果你是一个Java开发人员，这是非常有用的)，但它不仅限于构建基于Java的软件。</li>
-<li>Jenkins拥有大量的插件。这些插件极大的扩展了Jenkins的功能；它们都是开源的，而且它们可以直接通过web界面来进行安装与管理。</li>
-<li></li>
-</ul>
-<p>5.Jenkins的目标</p>
-<p>Jenkins的主要目标是监控软件开发流程，快速显示问题。所以能保证开发人员以及相关人员省时省力提高开发效率。</p>
-<p>CI系统在整个开发过程中的主要作用是控制：当系统在代码存储库中探测到修改时，它将运行构建的任务委托给构建过程本身。如果构建失败了，那么CI系统将通知相关人员，然后继续监视存储库。它的角色看起来是被动的；但它确能快速反映问题。</p>
-<p>特别是它具有以下优点：</p>
-<ul>
-<li>Jenkins一切配置都可以在web界面上完成。有些配置如MAVEN_HOME和Email，只需要配置一次，所有的项目就都能用。当然也可以通过修改XML进行配置。</li>
-<li>支持Maven的模块(Module)，Jenkins对Maven做了优化，因此它能自动识别Module，每个Module可以配置成一个job。相当灵活。</li>
-<li>测试报告聚合，所有模块的测试报告都被聚合在一起，结果一目了然，使用其他CI，这几乎是件不可能完成的任务。</li>
-<li>构件指纹(artifact fingerprint)，每次build的结果构件都被很好的自动管理，无需任何配置就可以方便的浏览下载。</li>
-</ul>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>以上便是自己总结的VS Code常用插件及常用快捷键,自己学习的同时希望能对大家有所帮助,如果您喜欢，可以打赏一杯咖啡……</p>
 
             </div>
             <hr/>
@@ -610,7 +573,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/07/02/tools/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%EF%BC%8C%E6%8C%81%E7%BB%AD%E4%BA%A4%E4%BB%98%EF%BC%8C%E6%8C%81%E7%BB%AD%E9%83%A8%E7%BD%B2%EF%BC%88CI-CD%EF%BC%89%E7%AE%80%E4%BB%8B/">http://yoursite.com/2020/07/02/tools/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%EF%BC%8C%E6%8C%81%E7%BB%AD%E4%BA%A4%E4%BB%98%EF%BC%8C%E6%8C%81%E7%BB%AD%E9%83%A8%E7%BD%B2%EF%BC%88CI-CD%EF%BC%89%E7%AE%80%E4%BB%8B/</a>
+                    <a href="http://yoursite.com/2018/07/06/tools/vscode%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E5%8F%8A%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%80%BB%E7%BB%93/">http://yoursite.com/2018/07/06/tools/vscode%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E5%8F%8A%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%80%BB%E7%BB%93/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -648,12 +611,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Jenkins/">
-                                    <span class="chip bg-color">Jenkins</span>
-                                </a>
-                            
-                                <a href="/tags/CI-CD/">
-                                    <span class="chip bg-color">CI/CD</span>
+                                <a href="/tags/VS-Code/">
+                                    <span class="chip bg-color">VS Code</span>
                                 </a>
                             
                         </div>
@@ -824,7 +783,7 @@
         repo: 'fireflyuan.github.io/',
         owner: 'fireflyuan',
         admin: "fireflyuan",
-        id: '2020-07-02T03-34-22',
+        id: '2018-07-06T10-31-00',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -852,51 +811,40 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2020/07/03/ML&DL/%E7%99%BE%E5%BA%A6%E4%BA%91GPU%E4%B8%BB%E6%9C%BAnvidia%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8%E5%92%8Ccuda%E5%AE%89%E8%A3%85/">
+                <a href="/2020/06/18/development/web%20dev/hello-world/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="百度云GPU主机nvidia显卡驱动和cuda安装">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
                         
-                        <span class="card-title">百度云GPU主机nvidia显卡驱动和cuda安装</span>
+                        <span class="card-title">Hello World</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-环境
-百度云GPU主机
-aria2添加驱动源sudo add-apt-repository ppa:graphics-drivers/ppasudo apt-get update2.安装Nvidia驱动sudo apt-get insta
+                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-03
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-18
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/ML-DL/" class="post-category">
-                                    ML&DL
+                            <a href="/categories/development/" class="post-category">
+                                    development
+                                </a>
+                            
+                            <a href="/categories/development/web-dev/" class="post-category">
+                                    web dev
                                 </a>
                             
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/cuda/">
-                        <span class="chip bg-color">cuda</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%99%BE%E5%BA%A6%E4%BA%91GPU/">
-                        <span class="chip bg-color">百度云GPU</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -908,26 +856,28 @@ aria2添加驱动源sudo add-apt-repository ppa:graphics-drivers/ppasudo apt-get
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/07/01/development/linux/AWS%E4%B8%8ARHEL-ec2-vsftpd%E6%90%AD%E5%BB%BA%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/">
+                <a href="/2018/05/01/development/web%20dev/Jhipster%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97-%E4%BA%8C/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="AWS上RHEL-ec2 vsftpd搭建常见问题总结">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Jhipster学习系列(二)">
                         
-                        <span class="card-title">AWS上RHEL-ec2 vsftpd搭建常见问题总结</span>
+                        <span class="card-title">Jhipster学习系列(二)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
                             
-综述上篇文章主要讲了如何在AWS-RHEL上搭建ftp服务器，由于各种原因，大家还是会遇到各种各样的问题，本篇文章来讨论下自己在搭建的过程中遇到的问题及解决方案。
-正常情况，打开浏览器，地址栏输入：ftp://ip地址回车，弹出输入用户名
+
+上文参见：jhipster学习系列（一）
+jhipster生成微服务项目及其配置创建jhipster-registry（这里有坑，至少在国内看来是有些bug的，不过还好查了些资料可以解决）
+直接从github上拉取jhipster-re
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2018-05-01
                             </span>
                         <span class="publish-author">
                             
@@ -937,41 +887,13 @@ aria2添加驱动源sudo add-apt-repository ppa:graphics-drivers/ppasudo apt-get
                                     development
                                 </a>
                             
-                            <a href="/categories/development/linux/" class="post-category">
-                                    linux
+                            <a href="/categories/development/web-dev/" class="post-category">
+                                    web dev
                                 </a>
                             
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/RHEL/">
-                        <span class="chip bg-color">RHEL</span>
-                    </a>
-                    
-                    <a href="/tags/linux/">
-                        <span class="chip bg-color">linux</span>
-                    </a>
-                    
-                    <a href="/tags/FTP/">
-                        <span class="chip bg-color">FTP</span>
-                    </a>
-                    
-                    <a href="/tags/vsftpd/">
-                        <span class="chip bg-color">vsftpd</span>
-                    </a>
-                    
-                    <a href="/tags/AWS/">
-                        <span class="chip bg-color">AWS</span>
-                    </a>
-                    
-                    <a href="/tags/FileZilla/">
-                        <span class="chip bg-color">FileZilla</span>
-                    </a>
-                    
                 </div>
                 
             </div>

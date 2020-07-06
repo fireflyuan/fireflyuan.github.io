@@ -714,7 +714,8 @@ registry</code> 则 registry 重置成默认库 <code>https://registry.yarnpkg.c
         <category>ML&amp;DL</category>
       </categories>
       <tags>
-        <tag>-cuda -百度云GPU</tag>
+        <tag>cuda</tag>
+        <tag>百度云GPU</tag>
       </tags>
   </entry>
   <entry>
@@ -772,6 +773,91 @@ registry</code> 则 registry 重置成默认库 <code>https://registry.yarnpkg.c
       <tags>
         <tag>ubuntu</tag>
         <tag>双系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VS Ccode常用插件及快捷键总结</title>
+    <url>/2018/07/06/tools/vscode%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E5%8F%8A%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<a id="more"></a>
+<p>Visual Studio Code(VS Code) 是由微软开发的一款免费、跨平台的文本编辑器。这篇文章主要总结下常用的VS Code plugins and shortcut keys，which can greatly improve production efficiency.</p>
+<h2 id="VS-Code-常用插件"><a href="#VS-Code-常用插件" class="headerlink" title="VS Code 常用插件"></a>VS Code 常用插件</h2><p><strong>安装方法</strong>：打开vscode，左侧边栏的田字格即为插件市场.</p>
+<p><img src="https://raw.githubusercontent.com/fireflyuan/picbed/master/blog_files/images/github_picbed20200706110552.png" alt="插件市场"></p>
+<ol>
+<li><p><code>Open-In-Browser</code><br>由于 VSCode 没有提供直接在浏览器中打开文件的内置功能，所以此插件在右键快捷菜单中添加了在默认浏览器查看文件选项，以及在客户端（Firefox，Chrome，IE）中打开命令面板选项。</p>
+</li>
+<li><p><code>prettier</code><br>一键美化你的 JavaScript/TypeScript/CSS 代码</p>
+</li>
+<li><p><code>vscode-icon</code><br>给vscode 资源树目录加上图标。</p>
+</li>
+<li><p><code>Auto Close Tag</code><br>自动闭合HTML/XML标签</p>
+</li>
+<li><p><code>Debugger for Chrome</code><br>映射chrome浏览器中debug</p>
+</li>
+<li><p><code>JavaScript(ES6) code snippets</code><br>ES6语法智能提示，以及快速输入，不仅仅支持.js，还支持.ts，.jsx，.tsx，.html，.vue，省去了配置其支持各种包含js代码文件的时间</p>
+</li>
+<li><p><code>markdown-extension-pack</code><br>这个插件包含了很多关于几乎所有关于markdown的常用插件.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Markdown All in One - All you need for Markdown (keyboard shortcuts, table of contents, auto    preview and more).</span><br><span class="line">markdownlint - Markdown&#x2F;CommonMark linting and    style checking for Visual Studio Code.</span><br><span class="line">Markdown PDF - This extension convert Markdown    file to pdf, html, png or jpeg file.</span><br><span class="line">Markdown+Math - Mdmath allows to use Visual    Studio Code as a markdown editor capable of    typesetting and rendering TeX math. In fact it    now reuses the built in markdown viewer. KaTeX    works inside as a fast math renderer.</span><br><span class="line">Markdown Preview Enhanced - Markdown Preview    Enhanced is an extension that provides you with    many useful functionalities such as automatic    scroll sync, math typesetting, mermaid, PlantUML,    pandoc, PDF export, code chunk, presentation    writer, etc.</span><br><span class="line">Markdown TOC - Generate TOC (table of contents)    of headlines from parsed markdown file.</span><br><span class="line">Markdown Table Prettifier - Makes tables more    readable for humans. Compatible with the Markdown    writer plugin&#39;s table formatter feature in Atom.</span><br><span class="line">Markdown Emoji - Adds :emoji: syntax support to    VS Code&#39;s built-in Markdown preview.</span><br><span class="line">:emojisense: - Adds suggestions and autocomplete    for emoji to VS Code.</span><br><span class="line">Path Autocomplete - Provides path completion for    visual studio code. Maybe can be used in    inserting file links in Markdown.</span><br><span class="line">Markdown Checkboxes - Adds support for Github&#39;s -    [ ] and - [x] checkbox syntax to VS Code&#39;s    built-in markdown preview.</span><br><span class="line">Markdown Preview Github Styling - Changes VS    Code&#39;s built-in markdown preview to match    Github&#39;s styling.</span><br><span class="line">Markdown Paste - Smartly paste for Markdown.</span><br><span class="line">Markdown Shortcuts - Handy shortcuts for editing    Markdown (.md, .markdown) files. You can also use    markdown formats in any other file.</span><br><span class="line">Excel to Markdown table - This VSCode extension    converts Excel data to Markdown table format.    Available through command Excel to Markdown table    and keyboard shortcut Shift+Alt+V.</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="常用快捷键-注意：我的键盘home-end与left-right方向键是重合的，如果你不是我这种键盘，请格外注意"><a href="#常用快捷键-注意：我的键盘home-end与left-right方向键是重合的，如果你不是我这种键盘，请格外注意" class="headerlink" title="常用快捷键(注意：我的键盘home/end与left/right方向键是重合的，如果你不是我这种键盘，请格外注意)"></a>常用快捷键(注意：我的键盘home/end与left/right方向键是重合的，如果你不是我这种键盘，请格外注意)</h2><ol>
+<li>命令面板<br>它是 VS Code 快捷键的主要交互界面，你可以通过 <code>F1</code> 或者<code>Cmd+Shift+P</code>(<code>Windows</code> 上是 <code>Ctrl+Shift+P</code>) 打开.VS Code 的绝大多数命令都可以在命令面板里搜到,你可以在命令面板中快速搜索命令并且执行.</li>
+<li>左侧边栏快捷键<br>下图是VS Code 默认界面里的几个常用部件的位置和快捷键<br><img src="https://raw.githubusercontent.com/fireflyuan/picbed/master/blog_files/images/github_picbed20200706132011.png" alt="左侧边栏"></li>
+<li>编辑操作  </li>
+</ol>
+<ul>
+<li>光标移动<ul>
+<li><code>ctrl+left/right</code><br>通常情况下，用<code>left/right</code>(左方向键和右方向键)移动鼠标光标是逐字母移动的，加上<code>ctrl</code>键以后，鼠标光标光标移动变为逐单词移动,如果光标在单词中间，此快捷键则先会将光标移动到单词前或单词后.这个功能只针对英文单词，对中文不起作用.</li>
+<li><code>home/end</code><br>将光标移动到行首或者行末.</li>
+<li><code>ctrl+home/end</code><br>将光标移动到文档的首末.</li>
+<li><code>ctrl+shift+\</code><br>相对于代码块的光标移动，这个快捷键将会使你的光标在的[],{},(),甚至html标签的开闭处切换.</li>
+</ul>
+</li>
+<li>文本选择<ul>
+<li><code>ctrl+shift+left</code><br>选中从单词首到光标所在处的字母段</li>
+<li><code>home+shift</code><br>选中行首到光标所在处的所有字符</li>
+</ul>
+</li>
+<li>刪除操作<ul>
+<li><code>ctrl+shift+k</code><br>删除当前行</li>
+<li><code>Home+Shift</code>再<code>delete</code><br>将光标之前到行首之间的内容全部删除</li>
+<li><code>ctrl+delete</code>或者 <code>end+shift</code>再<code>delete</code><br>将光标之后到行末的内容全部删除</li>
+<li><code>ctrl+shift+left</code>再<code>delete</code><br>将单词开头到光标之间的部分删除</li>
+</ul>
+</li>
+<li>剪切<ul>
+<li><code>ctrl+x</code></li>
+</ul>
+</li>
+<li>换行(光标可以不在行末)<ul>
+<li><code>ctrl+enter</code><br>换行到下一行</li>
+<li><code>ctrl+shift+enter</code><br>换行到上一行（在当前行上新加一行并开始）</li>
+</ul>
+</li>
+<li>自定义快捷键<br>使用<code>F1</code>打开命令面板并输入：<code>shortcut</code>,找到，perference: open default keyboard shortcuts(json),便可以修改和自定义快捷键了.</li>
+<li>移动代码或代码段<br>先选中再<code>alt+up/down</code></li>
+<li>复制并移动代码段<br><code>alt+shift+up/down</code></li>
+</ul>
+<ol start="4">
+<li><p>添加注释</p>
+<p> <code>ctrl+shift</code><br> 无论是html还是js,系统会自动识别文档格式并添加相应的注释，非常方便.</p>
+</li>
+<li><p>代码格式化</p>
+<p><code>alt+shift+f</code><br>如果是第一次使用，如果你有安装多个格式化的插件，会让你选则一个默认的格式化方式.  </p>
+</li>
+<li><p>多光标</p>
+</li>
+</ol>
+<ul>
+<li>使用鼠标<br>按住<code>alt</code>键的同时选择第二个光标点，这样就实现了多处编辑.</li>
+<li><code>ctrl+alt+up/down</code><br>会在每行的同样位置出现光标点</li>
+<li>一个技巧<br>可以使用<code>ctrl+alt+up/down</code>结合<code>end</code>键将光标移动到行尾，再使用<code>left/right</code>移动到其他位置.</li>
+<li><code>ctrl+d</code><br>会选中光标所在的单词，如果再次<code>ctrl+d</code>，并在所有 相同单词后创建一个光标，这是移动光标，可以达到多处编译的效果</li>
+</ul>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>以上便是自己总结的VS Code常用插件及常用快捷键,自己学习的同时希望能对大家有所帮助,如果您喜欢，可以打赏一杯咖啡……</p>
+]]></content>
+      <tags>
+        <tag>VS Code</tag>
       </tags>
   </entry>
 </search>
